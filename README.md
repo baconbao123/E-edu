@@ -5,7 +5,7 @@
  git status
  báo đỏ -> git add -> báo xanh
  git status (xem coi xanh hết chưa)
- git commit "Tên+ việc làm"
+ git commit -m "Tên+ việc làm"
  git push
  
 
