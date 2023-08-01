@@ -13,6 +13,7 @@ function App() {
    <>
     <h1>{student[0].name}</h1>
     <img src={student[0].img} alt=""/>
+    acc
     {/* <Router>
       <Route />
     </Router> */}
