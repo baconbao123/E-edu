@@ -15,7 +15,7 @@ export const SideBarItem = ({menuItems, }) => {
   }
 
     return (
-        <div style={{ display: 'flex', height: '100vh'}}>
+        <div className="sidebar_div" style={{ display: 'flex', height: '120vh'}}>
           <CDBSidebar className="sidebar_main">
             <CDBSidebarHeader prefix={<i className="fa fa-bars fa-large"></i>}>
               <a
