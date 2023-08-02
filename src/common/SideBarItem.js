@@ -13,6 +13,7 @@ export const SideBarItem = ({menuItems, }) => {
   const handleClickActive = (itemId) => {
     setActiveItem(itemId)
   }
+
     return (
         <div style={{ display: 'flex', height: '100vh'}}>
           <CDBSidebar className="sidebar_main">
