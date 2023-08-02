@@ -1,0 +1,227 @@
+@import '../../setting.scss';
+
+// Sidebar
+.sidebar_main {
+    background: $bg_sidebar!important;
+    color: $color_sidebar!important;
+
+    .jGeaPm .head-div {
+        padding: 13px 30px;
+    }
+
+    .item_sidebar {
+        color: $color_sidebar;
+        font-family: 'REM', sans-serif;
+
+        .item_icon_sidebar {
+            font-size: 27px;
+        }
+
+        .item_content_sidebar {
+            font-size: 19px;
+        }
+
+
+    }
+
+    .item_sidebar.active {
+        background-color: $bg_board;
+        margin-left: 0px;
+        width: 100%;
+        border-left: 7px solid #1b91ff;
+
+        .item_icon_sidebar {
+            color: #1b91ff;
+        }
+
+        .item_content_sidebar {
+            color: #1b91ff;
+        }
+        
+    }
+
+
+    .signout_sidebar {
+        color: rgb(247, 91, 91);
+        font-family: 'REM', sans-serif;
+        padding-top: 50px;
+        display: flex;
+        align-items: center;
+
+        .signout_item_sidebar {
+            font-size: 21px;
+            vertical-align: middle;
+        }
+
+        .signout_icon_sidebar {
+            font-size: 34px;
+
+        }
+    }
+
+    .access_sidebar {
+        .access_sidebar_header {
+            color: $color_sidebar;
+            font-family: 'REM', sans-serif;
+            border-top: 1px solid #eaeaea;
+            margin-left: 0px;
+            width: 100%;
+    
+            .title_accesss_sidebar {
+                padding-top: 50px;
+                font-size: 22px;
+                cursor: default;
+            }
+    
+        }
+
+        .access_sidebar_body {
+            color: black;
+            font-family: 'Roboto Condensed', sans-serif;
+            font-size: 18px;
+            padding-top: 50px;
+
+            .accesssing_sidebar {
+                display: flex;
+                justify-content: space-between;
+                cursor: default;
+
+                .item_access{
+                    .icon_access {
+                        font-size: 22px;
+                    }
+
+                    .content_access {
+                    }
+
+                }
+
+                .count_access{
+                    margin-right: 30px;
+                    vertical-align: middle;
+                    
+                }
+            }
+        }
+    }
+
+
+}
+
+// ------------------------Navigation-----------------------------------
+.nav_main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $bg_sidebar;
+    height: 60px;
+    padding: 5px;
+
+    .logo_nav{
+        position: absolute;
+        left: 300px;
+        top: 3%;
+        transform: translateY(-50%);
+
+        .logo_item{
+            width: 127px;
+        }
+    }
+
+    .search_nav {
+        position: absolute;
+        left: 480px;
+        top: 1.5%;
+        
+        .search_item {
+            border: 1px solid #f3f3f3;
+            height: 2.4rem;
+            outline: none;
+            box-sizing: border-box;
+            padding: 1px 10px;
+            transition: 0.2s ease-in-out;
+            width: 550px;
+            background-color: rgb(248, 247, 247);
+            border-radius: 20px;
+        }
+    }
+
+    .timenow_nav{
+        position: absolute;
+        left: 1200px;
+        top: 1%;
+    }
+
+    .dropdown-noti {
+        position: absolute;
+        left: 1310px;
+        // top: 1%;
+
+
+        .noti_nav {
+            font-size: 28px;
+            cursor: pointer;
+            background-color: $bg_sidebar;
+            color: black;
+            border: none;
+            outline: none;
+            
+            &::after{
+                display: none;
+            }
+        }
+    }
+
+
+    .info_nav{
+        display: flex;
+        position: absolute;
+        left: 1400px;
+        top: 0.6%;
+
+
+        .dropdown_toggle {
+            display: flex;
+            align-items: center;
+            background-color:  $bg_infor;
+            border-radius: 10px;
+            // cursor: pointer;
+            border: none;
+            outline: none;
+
+            &:active {
+                background-color: $bg_infor;
+            }
+
+            &::after {
+                color: black;
+                margin-left: 10px;
+            }
+
+        }
+
+        .dropdown_menu {
+            width: 195px;
+
+            .dropdown_menu_item {
+                &:active {
+                    background-color: $bg_infor;
+                    color: black;
+                }
+            }
+        }
+
+        .info_avatar {
+            width: 50px;
+            height: 40px;
+            background-color: gray;
+            border-radius: 10px;
+        }
+
+        .info_name {
+            margin-left: 8px;
+            font-family: 'Lato', sans-serif;
+            color: black
+        }
+    }
+}

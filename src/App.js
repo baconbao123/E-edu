@@ -1,24 +1,26 @@
-
 import './App.scss';
-import 'bootstrap/dist/css/bootstrap.min.css';
-//theme
-import "primereact/resources/themes/lara-light-indigo/theme.css";     
-    
-//core
-import "primereact/resources/primereact.min.css";                                       
-import {Router,Route} from 'react-router-dom';
-import {student} from './json/student'
-function App() {
-  return (
-   <>
-    <h1>{student[0].name}</h1>
-    <img src={student[0].img} alt=""/>
-    acc
-    {/* <Router>
-      <Route />
-    </Router> */}
+import { menuItemStudents } from './initialData/dataMenu';
+import { student } from './initialData/student';
+import { notifications } from './initialData/fetchnoti';
+import { BrowserRouter as Router } from 'react-router-dom';
 
-   </>
+import { SideBarItem } from './common/SideBarItem';
+import { Navigation } from './common/Navigation';
+
+function App() {
+  const menuItems = menuItemStudents;
+  const students = student;
+  const notifs = notifications
+
+  return (
+    <>
+      <Navigation students={students}/>
+      <Router>
+        <div className="edu-master">
+          <SideBarItem className="sidebar" menuItems={menuItems} notifs={notifs}/>
+        </div>
+      </Router>
+    </>
   );
 }
 
