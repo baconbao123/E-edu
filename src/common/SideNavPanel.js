@@ -6,6 +6,7 @@ import { SideBarItem } from './SideBarItem'
 import { Topbar } from './Topbar';
 import { Navigation } from './Topbar';
 import { students, notifications } from '../initialData/student';
+import './style.scss'
 export const SideNavPanel = ({ menuItems }) => {
   return (
 
