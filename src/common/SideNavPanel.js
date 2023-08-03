@@ -5,6 +5,7 @@ import HomePage from '../components/StudentLayout/Home/HomePage'
 import { SideBarItem } from './SideBarItem'
 import { Topbar } from './Topbar';
 import { Navigation } from './Topbar';
+import NotFound from '../components/NotFound';
 import { students, notifications } from '../initialData/student';
 import './style.scss'
 export const SideNavPanel = ({ menuItems }) => {
@@ -14,17 +15,18 @@ export const SideNavPanel = ({ menuItems }) => {
     <div className="edu-master " >
       <Topbar />
       <Row>
-      <Col md={2}>
-      <SideBarItem menuItems={menuItems} />
-      </Col>
-      <Col md={10} className='body'>
-      {menuItems.map((menuItem, index) => (
-      
-        <Routes key={index}>
-          <Route path={menuItem.link} element={menuItem.component} />
-        </Routes>
-      ))}
-      </Col>
+        <Col md={2}>
+          <SideBarItem menuItems={menuItems} />
+        </Col>
+        <Col md={10} className='body'>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            {menuItems.map((menuItem, index) => (
+              <Route key={index} path={menuItem.link} element={menuItem.component} />
+            ))}
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </Col>
       </Row>
     </div>
     </Container>
