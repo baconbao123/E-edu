@@ -5,6 +5,7 @@ import HomePage from '../components/StudentLayout/Home/HomePage'
 import {SideBarItem} from './SideBarItem'
 import { Navigation } from './Navigation';
 import { students, notifications } from '../initialData/student';
+import './style.scss'
 export const SideNavPanel = ({ menuItems }) => {
   return (
     <Row>
@@ -18,7 +19,7 @@ export const SideNavPanel = ({ menuItems }) => {
           <Navigation students={students} notifications={notifications}/>
           </Row>
             <Row>
-                <Col lg={12}>
+                <Col lg={12} className='body'>
                   {menuItems.map((menuItem, index)=> (
                     <Routes key={index}>
                         <Route path={menuItem.link} element={menuItem.component} />
