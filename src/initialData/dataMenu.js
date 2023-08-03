@@ -9,6 +9,7 @@ import HomePage from '../components/StudentLayout/Home/HomePage'
 import FeedBack from '../components/StudentLayout/FeedBack/FeedBack';
 import ContactUs from '../components/StudentLayout/ContactUs/ContactUs';
 import Setting from '../components/StudentLayout/Setting/Setting'
+import { Route } from 'react-router-dom'
 export const menuItemStudents = [
     {content: 'Home', icon: <AiFillHome />,prefix: <AiFillHome />, link: '/', component: <HomePage />},
     {content: 'Revision Classes', icon: <BsPeople />, prefix: <BsPeople />,link: '/revision'},
@@ -19,6 +20,7 @@ export const menuItemStudents = [
     {content: 'Contact Us', icon: <FiPhoneCall />, prefix: <FiPhoneCall />,link: '/contact_us',component: <ContactUs />},
     {content: 'Setting', icon: <IoSettingsOutline />, prefix: <IoSettingsOutline />,link: '/setting',component: <Setting />}
 ];
+
 
 // export const menuItemTeachers = [
 //     {content: 'People', icon: <AiFillHome />, link: '/'},

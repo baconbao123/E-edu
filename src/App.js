@@ -27,6 +27,7 @@ function App() {
   if(Cookies.get('isLogin')) {
     console.log(loginValue);
     setIslogin(true)
+    
 
   }
 
@@ -36,6 +37,7 @@ function App() {
     
       
         <LoginContext.Provider value={{isLogin,loginValue}}>
+          
           {isLogin? <SideNavPanel menuItems={menuItems}/> : <Login/>}
          
         </LoginContext.Provider>

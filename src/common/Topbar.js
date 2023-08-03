@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useContext } from "react";
 import { Col, Container, Dropdown, Row } from "react-bootstrap";
 import { BsBell } from 'react-icons/bs'
 import { CiSearch } from 'react-icons/ci'
@@ -8,11 +8,12 @@ import './style.scss'
 import logo from '../assets/img/logo.png'
 import { Link } from "react-router-dom";
 import { TbTextDirectionLtr } from "react-icons/tb";
-
+import { LoginContext } from "../components/Authentication/LoginContext";
 export const Topbar = ({ students, notifications }) => {
     const currentTime = new Date().toLocaleTimeString()
     const currentDate = new Date().toLocaleDateString()
-
+    const {loginValue}=useContext(LoginContext);
+    console.log("chekc login from topbar",loginValue);
     return (
         <div className="top-bar ">
             <div className="d-none d-sm-block d-md-none">
@@ -44,7 +45,7 @@ export const Topbar = ({ students, notifications }) => {
                     <div className="top-bar-info col-lg-2 ">
                         <div>
                             <img src={require(`../assets/img/img-todolist.jpg`)} alt="avatar" className="avatar" width={40} />
-                            <span className="info_name"> Long Phi<span></span></span>
+                            <span className="info_name"> {loginValue.email}<span></span></span>
                         </div>
                         <span><IoIosArrowDown /></span>
 
