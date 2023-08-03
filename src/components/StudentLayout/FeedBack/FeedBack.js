@@ -6,10 +6,10 @@ export default function FeedBack() {
   return (
     <>
       <Row className=''>
-        <Col lg={6} className='mb-4'>
+        <Col lg={6} className='mb-4 col-feedback'>
           <img className='img-feedback' src={feedback} />
         </Col>
-        <Col lg={6} className=' mb-4 d-flex justify-content-center '>
+        <Col lg={6} className=' mb-4 d-flex justify-content-center col-feedback '>
           
 
           <Card className='card-feedback ' >

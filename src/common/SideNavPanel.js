@@ -12,12 +12,19 @@ export const SideNavPanel = ({ menuItems }) => {
 
     <div className="edu-master " >
       <Topbar />
+      <Row>
+      <Col md={2}>
       <SideBarItem menuItems={menuItems} />
+      </Col>
+      <Col md={10} className='body'>
       {menuItems.map((menuItem, index) => (
+      
         <Routes key={index}>
           <Route path={menuItem.link} element={menuItem.component} />
         </Routes>
       ))}
+      </Col>
+      </Row>
     </div>
 
   );

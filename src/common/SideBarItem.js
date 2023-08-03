@@ -37,7 +37,6 @@ export const SideBarItem = ({ menuItems }) => {
             <Link
               key={index}
               to={item.link}
-
             >
               <li
                 key={index}

@@ -5,13 +5,11 @@ import {GiEmptyHourglass} from 'react-icons/gi'
 import {VscFeedback} from 'react-icons/vsc'
 import {FiPhoneCall} from 'react-icons/fi'
 import {IoSettingsOutline} from 'react-icons/io5'
-
 import HomePage from '../components/StudentLayout/Home/HomePage'
 import FeedBack from '../components/StudentLayout/FeedBack/FeedBack';
 import ContactUs from '../components/StudentLayout/ContactUs/ContactUs';
 import Setting from '../components/StudentLayout/Setting/Setting'
 export const menuItemStudents = [
-  
     {content: 'Home', icon: <AiFillHome />,prefix: <AiFillHome />, link: '/', component: <HomePage />},
     {content: 'Revision Classes', icon: <BsPeople />, prefix: <BsPeople />,link: '/revision'},
     {content: 'Study Resources', icon: <AiOutlineRead />, prefix: <AiOutlineRead />,link: '/resources'},
