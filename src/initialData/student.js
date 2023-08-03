@@ -1,13 +1,10 @@
-import avatar1 from '../assets/img/avatar1.jpg'
+import avatar4 from '../assets/img/avatar4.png'
 
 export const students = [
-    {name:'Phuong Anh', class:'C22081'},
+    {name:'Phuong Anh', class:'C22081', imgstu: avatar4},
 ]
 
 
 export const notifications = [
-    {id:1, message:'Xin chao'},
-    {id:2, message:'Minh la Anh'},
-    {id:3, message:'Mot ngày vui vẻ'},
-    {id:2, message:'Minh fix bug típ đây'}
+    {img_noti: avatar4, title: 'Meeting',time: '8 A.M - 9 A.M', date: '18-19th July 2222',message:'Interview in a company '}
 ]

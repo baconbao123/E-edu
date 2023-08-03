@@ -11,14 +11,14 @@ import ContactUs from '../components/StudentLayout/ContactUs/ContactUs';
 import Setting from '../components/StudentLayout/Setting/Setting'
 import { Route } from 'react-router-dom'
 export const menuItemStudents = [
-    {content: 'Home', icon: <AiFillHome />,prefix: <AiFillHome />, link: '/', component: <HomePage />},
-    {content: 'Revision Classes', icon: <BsPeople />, prefix: <BsPeople />,link: '/revision'},
-    {content: 'Study Resources', icon: <AiOutlineRead />, prefix: <AiOutlineRead />,link: '/resources'},
-    {content: 'Your Marks', icon: <BsBookmarkDash />, prefix: <BsBookmarkDash />,link: '/your_mark'},
-    {content: 'Academic Progress', icon: <GiEmptyHourglass />, prefix: <GiEmptyHourglass />,link: '/progress'},
-    {content: 'Feedback', icon: <VscFeedback />, prefix: <VscFeedback />,link: '/feedback',component: <FeedBack />},
-    {content: 'Contact Us', icon: <FiPhoneCall />, prefix: <FiPhoneCall />,link: '/contact_us',component: <ContactUs />},
-    {content: 'Setting', icon: <IoSettingsOutline />, prefix: <IoSettingsOutline />,link: '/setting',component: <Setting />}
+    {content: 'Home', icon: <AiFillHome />, link: '/', component: <HomePage />},
+    {content: 'Revision Classes', icon: <BsPeople />, link: '/revision'},
+    {content: 'Study Resources', icon: <AiOutlineRead />, link: '/resources'},
+    {content: 'Your Marks', icon: <BsBookmarkDash />, link: '/your_mark'},
+    {content: 'Academic Progress', icon: <GiEmptyHourglass />, link: '/progress'},
+    {content: 'Feedback', icon: <VscFeedback />, link: '/feedback',component: <FeedBack />},
+    {content: 'Contact Us', icon: <FiPhoneCall />,link: '/contact_us',component: <ContactUs />},
+    {content: 'Setting', icon: <IoSettingsOutline />, link: '/setting',component: <Setting />}
 ];
 
 

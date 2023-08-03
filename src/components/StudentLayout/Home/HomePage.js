@@ -2,10 +2,13 @@ import React from "react"
 import {Row,Col, ProgressBar } from 'react-bootstrap'
 import './Home.scss'
 
-import {students} from '../../../initialData/student'
+import {students, notifications} from '../../../initialData/student'
 import {teachers} from '../../../initialData/teacher'
 
 import {PiHandWavingFill} from 'react-icons/pi'
+import {RiMedalLine} from 'react-icons/ri'
+import {GoDotFill} from 'react-icons/go'
+import {MdKeyboardArrowRight} from 'react-icons/md'
 
 import imgstudent from '../../../assets/img/schoolchildren.png'
 
@@ -86,21 +89,68 @@ const HomePage = () => {
                                                 </Col>
                                                 <Col lg={5} className="progress_subject">
                                                     <div className="circular-progress">
-                                                        <ProgressBar className="progress_posi" animated now={45}/>
+                                                        <ProgressBar className="progress_posi" animated now={78} />
                                                     </div>
                                                 </Col>
                                             </Row>
+                                        </div>
+                                    </div>
+                                </Col>
+                            </Row>
+                            <Row>
+                                <Col lg={8}>
+                                    
+                                </Col>
+                                <Col lg={4}>
+                                    <div className="content_toprank">
+                                        <Row>
+                                            <span className="toprank_label">Student Ranking Chart</span>
+                                        </Row>
+                                        <div className="content_toprank_div">
                                             <Row>
-                                                <Col lg={7} className="title_subject">
-                                                    <div className="title_subject_div">
-                                                        <label>Mathematics</label><br/>
-                                                        <span>Unit 3</span>
+                                                <Col lg={3}>
+                                                    <img src={students[0].imgstu} className="avatar-stu"/>
+                                                </Col>
+                                                <Col lg={7}>
+                                                    <div className="content_toprank_posi">
+                                                        <span className="name_toprank">{students[0].name}</span><br />
+                                                        <span className="point_toprank">Point: 98/100</span>
                                                     </div>
                                                 </Col>
-                                                <Col lg={5} className="progress_subject">
-                                                    <div className="circular-progress">
-                                                        <ProgressBar className="progress_posi" animated now={45}/>
+                                                <Col lg={2}>
+                                                    <RiMedalLine className="medal_toprank"/>
+                                                </Col>
+                                            </Row>
+                                        </div>
+                                        <div className="content_toprank1_div">
+                                            <Row>
+                                                <Col lg={3}>
+                                                    <img src={students[0].imgstu} className="avatar1-stu"/>
+                                                </Col>
+                                                <Col lg={7}>
+                                                    <div className="content_toprank1_posi">
+                                                        <span className="name_toprank1">{students[0].name}</span><br />
+                                                        <span className="point_toprank1">Point: 98/100</span>
                                                     </div>
+                                                </Col>
+                                                <Col lg={2}>
+                                                    <RiMedalLine className="medal_toprank1"/>
+                                                </Col>
+                                            </Row>
+                                        </div>
+                                        <div className="content_toprank2_div">
+                                            <Row>
+                                                <Col lg={3}>
+                                                    <img src={students[0].imgstu} className="avatar2-stu"/>
+                                                </Col>
+                                                <Col lg={7}>
+                                                    <div className="content_toprank2_posi">
+                                                        <span className="name_toprank2">{students[0].name}</span><br />
+                                                        <span className="point_toprank2">Point: 98/100</span>
+                                                    </div>
+                                                </Col>
+                                                <Col lg={2}>
+                                                    <RiMedalLine className="medal_toprank2"/>
                                                 </Col>
                                             </Row>
                                         </div>
@@ -111,7 +161,35 @@ const HomePage = () => {
                     </Col>
                     <Col lg={4} className="col_right">
                         <div className="noti_event">
-
+                            <div className="label_noti_event">
+                                <span className="label_noti">Information & Events</span>
+                                <a className="label_seeall">See all</a>
+                            </div>
+                            <div className="noti_posi">
+                                <Row>
+                                    <div className="noti_div">
+                                        <Col lg={3}>
+                                            <img src={notifications[0].img_noti} className="img_noti"/>
+                                        </Col>
+                                        <Col lg={8}>
+                                            <ul className="ul_noti">
+                                                <li className="noti_title">{notifications[0].title}</li>
+                                                <li className="noti_datetime">
+                                                    <span>{notifications[0].date}</span> &nbsp;&nbsp; <GoDotFill style={{color: '#007bff', fontSize: '11px', marginTop: '-2px'}}/>
+                                                    <span>{notifications[0].time}</span>
+                                                </li>
+                                                <li className="noti_mess">{notifications[0].message}</li>
+                                            </ul>
+                                        </Col>
+                                        <Col lg={1}>
+                                            <div className="arrow_show">
+                                                <MdKeyboardArrowRight style={{fontSize: '18px'}}/>
+                                            </div>
+                                        </Col>
+                                    </div>
+                                </Row>
+                            </div>
+                            
                         </div>
                     </Col>
                 </Row>
