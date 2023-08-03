@@ -2,11 +2,13 @@ import React, { useState } from "react";
 import { Col, Container, Dropdown, Row } from "react-bootstrap";
 import {BsBell} from 'react-icons/bs'
 import './style.scss'
-
+import { useContext } from "react";
+import { LoginContext } from "../components/Authentication/LoginContext";
 export const Navigation = ({students, notifications}) => {
     const currentTime = new Date().toLocaleTimeString()
     const currentDate = new Date().toLocaleDateString()
-
+    const {loginValue}=useContext(LoginContext);
+    console.log(loginValue);
     return (
         <div className="nav_main">
             <div className="nav_div">
@@ -48,7 +50,7 @@ export const Navigation = ({students, notifications}) => {
                                 <Dropdown>
                                     <Dropdown.Toggle className="dropdown_toggle">
                                         <div className="info_avatar"></div>
-                                        <div className="info_name">{students[0].name} &nbsp;</div>
+                                        <div className="info_name">{loginValue.email} &nbsp;</div>
                                     </Dropdown.Toggle>
                                     <Dropdown.Menu className="dropdown_menu">
                                         <Dropdown.Item className="dropdown_menu_item" href="#/action-1">Action</Dropdown.Item>

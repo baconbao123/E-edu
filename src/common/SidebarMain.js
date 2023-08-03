@@ -5,6 +5,7 @@ import HomePage from '../components/StudentLayout/Home/HomePage'
 import {SideBarItem} from './SideBarItem'
 import { Navigation } from '../common/Navigation';
 import { students, notifications } from '../initialData/student';
+import Login from '../components/Authentication/Login';
 export const SidebarMain = ({ menuItems }) => {
   return (
     <Row>
@@ -20,7 +21,9 @@ export const SidebarMain = ({ menuItems }) => {
             <Row>
                 <Col lg={12}>
                     <Routes>
-                        <Route path="/" element={<HomePage />} />
+                        <Route exact path="/" element={<HomePage />} />
+                       
+            
                     </Routes>
                 </Col>
             </Row>
