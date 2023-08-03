@@ -28,7 +28,7 @@ export const SideBarItem = ({menuItems, }) => {
             </CDBSidebarHeader>
 
             <CDBSidebarContent>
-              <CDBSidebarMenu>
+              <CDBSidebarMenu prefix={<i className="fa fa-bars fa-large"></i>}>
                 {menuItems && menuItems.map((item,index) => (
                   <Link
                     key={index}

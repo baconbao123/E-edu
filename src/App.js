@@ -1,9 +1,9 @@
 import './App.scss';
 import { menuItemStudents } from './initialData/dataMenu';
 
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router} from 'react-router-dom';
 
-import { SidebarMain } from './common/SidebarMain';
+import { SideNavPanel } from './common/SideNavPanel';
 
 
 
@@ -12,9 +12,8 @@ function App() {
 
   return (
     <>
-    
       <Router>
-        <SidebarMain menuItems={menuItems}/>
+        <SideNavPanel menuItems={menuItems}/>
       </Router>
     </>
   );

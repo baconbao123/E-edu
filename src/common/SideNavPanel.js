@@ -3,9 +3,9 @@ import { Row, Col } from 'react-bootstrap';
 import { Routes, Route } from 'react-router-dom';
 import HomePage from '../components/StudentLayout/Home/HomePage' 
 import {SideBarItem} from './SideBarItem'
-import { Navigation } from '../common/Navigation';
+import { Navigation } from './Navigation';
 import { students, notifications } from '../initialData/student';
-export const SidebarMain = ({ menuItems }) => {
+export const SideNavPanel = ({ menuItems }) => {
   return (
     <Row>
         <div className="edu-master" >
@@ -19,9 +19,11 @@ export const SidebarMain = ({ menuItems }) => {
           </Row>
             <Row>
                 <Col lg={12}>
-                    <Routes>
-                        <Route path="/" element={<HomePage />} />
+                  {menuItems.map((menuItem, index)=> (
+                    <Routes key={index}>
+                        <Route path={menuItem.link} element={menuItem.component} />
                     </Routes>
+                  ))}
                 </Col>
             </Row>
             </div>
