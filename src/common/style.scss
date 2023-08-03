@@ -19,7 +19,13 @@
             overflow: hidden;
         }
 
+        .fRhOkl {
+            padding-left: 0px;
+        }
 
+        .sc-hCPjZK fvWJS {
+            padding-left: 0px;
+        }
     
         .item_sidebar {
             color: $color_sidebar;
@@ -38,16 +44,16 @@
     
         .item_sidebar.active {
             background-color: $bg_board;
-            margin-left: 0px;
+            // margin-left: 0px;
             width: 100%;
-            border-left: 7px solid #1b91ff;
+            border-left: 7px solid $color_press;
     
             .item_icon_sidebar {
-                color: #1b91ff;
+                color: $color_press;
             }
     
             .item_content_sidebar {
-                color: #1b91ff;
+                color: $color_press;
             }
             
         }
@@ -138,8 +144,8 @@
         .logo_nav{
             
             .logo_item{
-                width: 94px;
-                height: 44px;
+                width: 75px;
+                height: 53px;
 
             }
         }
@@ -185,7 +191,7 @@
                 }
     
                 &:hover {
-                    color: #1b91ff;
+                    color: $color_press;
                 }
             }
     

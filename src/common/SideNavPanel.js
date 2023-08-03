@@ -9,10 +9,10 @@ export const SideNavPanel = ({ menuItems }) => {
   return (
     <Row>
         <div className="edu-master" >
-        <Col lg={2}>
+        <Col lg={3}>
             <SideBarItem className="sidebar" menuItems={menuItems} />
         </Col>
-        <Col lg={10}>
+        <Col lg={9}>
             <div className='content' style={{left: '1080px'}}>
           <Row>
           <Navigation students={students} notifications={notifications}/>

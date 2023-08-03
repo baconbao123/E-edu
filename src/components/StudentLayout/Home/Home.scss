@@ -3,12 +3,191 @@
 .homepage_student {
     color: black;
     margin-top: 90px;
+    overflow-y: scroll;
 
     .homepage_div {
-        // background-color: aqua;
+        // background-color: rgb(169, 197, 197);
         width: 1180px;
         position: fixed;
         left: 290px;
-        height: 100%;
+        // height: 100%;
+    }
+
+    .col_left {
+        .banner_welcome {
+            height: 160px;
+            width: 740px;
+            border-radius: 30px;
+            background-color: $color_press;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-left: 40px;
+            cursor: default;
+
+            .banner_content {
+                height: 130px;
+                width: 440px;
+                // background-color: gray;
+                color: white;
+                padding-top: 10px;
+
+
+                .content_wel {
+                    font-weight: 600;
+                    font-size: 27px;
+                    font-family: 'Open Sans', sans-serif;
+
+                }
+
+                .icon_hand {
+                    color: rgb(253, 222, 21);
+                    font-size: 35px;
+                    margin-top: -5px;
+                }
+
+                .content_small {
+                    padding-top: 15px;
+                    font-family: 'Open Sans', sans-serif;
+                    letter-spacing: 1px;
+                }
+            }
+
+            .img_pos {
+                width: 200px;
+                height: 160px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .img_children {
+                    height: 200px;
+                }
+            }
+        }
+
+        .prepare_progress {
+
+            width: 740px;
+            margin-top: 30px;
+
+            .content_prepare_div {
+                height: 250px;
+                width: 430px;
+                background-color: $bg_sidebar;
+                border-radius: 10px;
+                padding-bottom: 10px;
+
+
+                .content_prepare {
+                    font-family: 'Open Sans', sans-serif;
+                    padding-left: 10px;
+                    padding-top: 10px;
+
+
+
+                    .label_header {
+                        display: flex;
+                        align-items: end;
+                        justify-content: space-between;
+
+                        .label_content {
+                            font-weight: 600;
+                        }
+                        .label_view {
+                            padding-right: 30px;
+                            cursor: pointer;
+                            text-decoration: none;
+                        }
+
+                    }
+
+                }
+
+                .content_task_div {
+                    height: 100%;
+                    width: 370px;
+                    border-radius: 30px;
+                    margin-top: 30px;
+
+
+                    .avatar_task {
+                        padding-left: 10px;
+                        width: 90px;
+                        height: 60px;
+                        
+                    }
+
+                    .ul_task {
+                        list-style-type: none;
+
+                        .name_teacher {
+                            font-size: 18px;
+                        }
+
+                        .task_name {
+                            color: gray;
+                        }
+                    }
+                }
+            }
+
+            .content_progress {
+                height: 100%;
+                width: 100%;
+                background-color: $bg_sidebar;
+                border-radius: 10px;
+        
+
+                .content_label {
+                    font-size: 17px;
+                    font-weight: bold;
+                    font-family: 'Open Sans', sans-serif;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding-top: 7px;
+                }
+
+                .content_progress_div {
+                    // background-color: rgb(233, 139, 17);
+                    width: 100%;
+                    height: 220px;
+                    padding: 5px 10px;
+                    overflow-y: scroll;
+                    overflow-x: hidden;
+
+                    .title_subject_div {
+                        padding-top: 10px;
+
+                    }
+
+                    .progress_subject {
+                        padding-top: 10px;
+                        padding-left: 18px;
+                        .circular-progress {
+                            padding-left: 5px;
+                            width: 50px;
+                            height: 45px;
+                            border-radius: 100%;
+                        }
+                        
+                        .progress_posi {
+                            width: 100%;
+                            height: 100%;
+                            border-radius: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .col_right {
+        .noti_event {
+            height: 100%;
+            width: 355px;
+            border-radius: 30px;
+            background-color: $bg_sidebar;
+        }
     }
 }

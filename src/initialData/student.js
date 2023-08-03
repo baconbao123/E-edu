@@ -1,6 +1,7 @@
+import avatar1 from '../assets/img/avatar1.jpg'
 
 export const students = [
-    {name:'Phuong Anh', class:'C22081', img:null},
+    {name:'Phuong Anh', class:'C22081'},
 ]
 
 

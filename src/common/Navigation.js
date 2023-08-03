@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Col, Container, Dropdown, Row } from "react-bootstrap";
 import {BsBell} from 'react-icons/bs'
 import './style.scss'
+import logo from '../assets/img/logo.png'
 
 export const Navigation = ({students, notifications}) => {
     const currentTime = new Date().toLocaleTimeString()
@@ -14,7 +15,7 @@ export const Navigation = ({students, notifications}) => {
                     <Row>
                         <Col lg={1}>
                             <div className="logo_nav">
-                                <img className="logo_item" src="https://edunet.mylms.com.my/pluginfile.php/1/theme_archaius/logo/1655449568/logo_edunet_2.png"/>
+                                <img className="logo_item" src={logo}/>
                             </div>
                         </Col>
                         <Col lg={6}>

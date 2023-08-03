@@ -1,0 +1,26 @@
+@import '../../../../setting';;
+
+.mark_student {
+    color: black;
+    margin-top: 90px;
+
+    .mark_div {
+        background-color: rgb(169, 197, 197);
+        width: 1180px;
+        position: fixed;
+        left: 290px;
+        height: 100%;
+    }
+
+    .col_left {
+        .banner_welcome {
+            height: 160px;
+            width: 690px;
+            background-color: $color_press;
+        }
+    }
+
+    .col_right {
+        
+    }
+}

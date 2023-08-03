@@ -18,13 +18,13 @@ export const SideBarItem = ({menuItems, }) => {
         <div className="sidebar_div" style={{ display: 'flex', height: '120vh'}}>
           <CDBSidebar className="sidebar_main">
             <CDBSidebarHeader prefix={<i className="fa fa-bars fa-large"></i>}>
-              <a
+              <Link
                 href="/"
                 className="text-decoration-none"
                 style={{ color: 'inherit' }}
               >
                 Sidebar
-              </a>
+              </Link>
             </CDBSidebarHeader>
 
             <CDBSidebarContent>
