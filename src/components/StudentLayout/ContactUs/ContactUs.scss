@@ -1,0 +1,25 @@
+.card-contactUs {
+    height: 18.625rem !important;
+    border-radius: 20px!important;
+    box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.2);
+    .location-contact {
+        background-color: #F0FFF3;
+    }
+
+    .mail-contact {
+        background-color: #FFF0F3;
+    }
+
+    .phone-contact {
+        background-color: #F0F7FF;
+        .phone-number {
+            position: relative;
+           bottom: 29px;
+           left: 42px;
+        }
+    }
+    .border-radius {
+        border-radius: 10px;
+    }
+    
+}
