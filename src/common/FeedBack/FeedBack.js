@@ -1,15 +1,15 @@
 import React from 'react'
 import { Row, Col, Card, Form,Button } from 'react-bootstrap'
-import feedback from '../../../assets/img/feedback.png'
+import feedback from '../../assets/img/feedback.png'
 import './FeedBack.scss'
 export default function FeedBack() {
   return (
     <>
       <Row className=''>
-        <Col lg={6} className='mb-4 col-feedback'>
+        <Col sm={5} md={6} className='mb-4 col-feedback d-flex align-items-center'>
           <img className='img-feedback' src={feedback} />
         </Col>
-        <Col lg={6} className=' mb-4 d-flex justify-content-center col-feedback '>
+        <Col sm={7} md={6} className=' mb-4 d-flex justify-content-center col-feedback '>
           
 
           <Card className='card-feedback ' >

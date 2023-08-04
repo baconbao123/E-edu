@@ -1,8 +1,10 @@
+@import '../../../setting';
+
 .container {
     .header {
         position: fixed ;
         top: 0;
-        background-color: #fff;
+        background-color: $bg_dasboard;
         width: 100%;
     }
     .logo {

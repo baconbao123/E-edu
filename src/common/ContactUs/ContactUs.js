@@ -1,6 +1,6 @@
 import React from 'react'
 import { Col, Row, Card } from 'react-bootstrap'
-import contactUs from '../../../assets/img/contactUs.png'
+import contactUs from '../../assets/img/contactUs.png'
 import { AiOutlineEnvironment, AiOutlineMail } from "react-icons/ai";
 import { BiPhoneCall } from "react-icons/bi";
 import './ContactUs.scss'
@@ -9,7 +9,7 @@ export default function ContactUs() {
 
         <>
             <Row>
-                <Col lg={6} className='mt-3 d-flex justify-content-center align-items-center'>
+                <Col  sm={5} lg={6} className='mt-3 d-flex justify-content-center align-items-center mb-3'>
                     <Card className='card-contactUs' >
                         <Card.Body>
                             <Card.Title className='text-center'>Helplines</Card.Title>
@@ -35,8 +35,8 @@ export default function ContactUs() {
                         </Card.Body>
                     </Card>
                 </Col>
-                <Col lg={6} className='mt-3'>
-                    <img src={contactUs} />
+                <Col  sm={7} lg={6} className='mt-3 text-center d-flex '>
+                    <img src={contactUs} className='img-contact' />
                 </Col>
             </Row>
         </>
