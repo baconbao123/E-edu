@@ -10,7 +10,7 @@ export default function Login() {
    
     const [email,setEmail]=useState();
     const [password,setPassword]=useState()
-    const [position,setPosition]=useState()
+    const [position,setPosition]=useState('1')
     const [showPass,setShowPass]=useState(true)
     const [validate,setValidate]=useState(false)
     const expiryDate = new Date();
@@ -28,6 +28,7 @@ export default function Login() {
         Cookies.set('isLogin', JSON.stringify(obj),{expires:expiryDate})
       }
     }
+    console.log(position);
   return (
     <>
 

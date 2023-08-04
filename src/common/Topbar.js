@@ -13,7 +13,9 @@ export const Topbar = ({ students, notifications }) => {
     const currentTime = new Date().toLocaleTimeString()
     const currentDate = new Date().toLocaleDateString()
     const {loginValue}=useContext(LoginContext);
-    console.log("chekc login from topbar",loginValue);
+    const value=useContext(LoginContext);
+
+
     return (
         <div className="top-bar ">
             <div className="d-none d-sm-block d-md-none">

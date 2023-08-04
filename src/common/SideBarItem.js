@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation,useNavigate } from 'react-router-dom';
 import { CDBSidebar, CDBSidebarContent, CDBSidebarFooter, CDBSidebarHeader, CDBSidebarMenu, CDBSidebarMenuItem } from 'cdbreact';
 import { IoLogOutOutline } from 'react-icons/io5'
 import { PiStudentDuotone } from 'react-icons/pi'
@@ -8,17 +8,18 @@ import { BsPeople } from 'react-icons/bs'
 import { AiOutlineMenuFold } from 'react-icons/ai'
 import { TbDeviceImacSearch } from 'react-icons/tb'
 import './style.scss'
-
+import Cookies from "js-cookie";
+import Swal from "sweetalert2";
 export const SideBarItem = ({ menuItems }) => {
   const [activeItem, setActiveItem] = useState(null);
-
+  console.log('check menu items from side', menuItems);
   // const handleClickActive = (itemId) => {
   //   setActiveItem(itemId);
   // };
 
   // path active
   const [activeLink, setActiveLink] = useState('');
-
+  const navigate=useNavigate()
   const location = useLocation();
   useEffect(() => {
     setActiveLink(location.pathname);
@@ -28,13 +29,33 @@ export const SideBarItem = ({ menuItems }) => {
   const toggleCollapse = () => {
     setCollapsed(!collapsed);
   };
+  // ham logout
+  const logout=()=>  {
+    Swal.fire({
+      title: 'Are you sure?',
+      text: "You won't be able to revert this!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Logout'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Cookies.remove('isLogin') 
+        window.location.reload();
+
+      }
+    })
+  
+  }
   return (
     <aside className={`left-bar-main ${collapsed ? "collapsed" : ""} 	d-none d-sm-block`}>
       <div className="left-bar-list-menu">
         <label onClick={toggleCollapse} ><AiOutlineMenuFold className="left-bar-icon-list"></AiOutlineMenuFold></label>
         <ul>
           {menuItems.map((item, index) => (
-            <Link
+
+              <Link
               key={index}
               to={item.link}
             >
@@ -57,10 +78,14 @@ export const SideBarItem = ({ menuItems }) => {
 
               </li>
             </Link>
-          ))}
+          )
+          
+            
+           
+          )}
         </ul>
-        <div className="left-bar-logout hide-title"  {...(collapsed ? { title: 'Logout' } : {})} >
-          <IoLogOutOutline className="left-bar-icon-logout" /> <span>Logout</span>
+        <div className="left-bar-logout hide-title"  {...(collapsed ? { title: 'Logout' } : {})} onClick={()=>logout()} >
+          <IoLogOutOutline className="left-bar-icon-logout"  /> <span>Logout</span>
         </div>
         <hr />
         <div className="hide-title" >
