@@ -1,44 +1,62 @@
-import React, { useState, useEffect } from "react";
-import { Link, useLocation } from 'react-router-dom';
-import { CDBSidebar, CDBSidebarContent, CDBSidebarFooter, CDBSidebarHeader, CDBSidebarMenu, CDBSidebarMenuItem } from 'cdbreact';
+import React, { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import "./NavbarMD.scss";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import { IoLogOutOutline } from 'react-icons/io5'
 import { PiStudentDuotone } from 'react-icons/pi'
 import { LiaChalkboardTeacherSolid } from 'react-icons/lia'
 import { BsPeople } from 'react-icons/bs'
 import { AiOutlineMenuFold } from 'react-icons/ai'
 import { TbDeviceImacSearch } from 'react-icons/tb'
-import './style.scss'
-import AOS from "aos";
-import "aos/dist/aos.css";
+import { menuItemStudents } from "../initialData/dataMenu";
 
-export const SideBarItem = ({ menuItems }) => {
+function NavbarMD({ show }) {
   useEffect(() => {
-    AOS.init();
+    AOS.init({ once: true }); // Initialize AOS with the "once" option set to true
   }, []);
-  const [activeItem, setActiveItem] = useState(null);
 
-  // const handleClickActive = (itemId) => {
-  //   setActiveItem(itemId);
-  // };
+  useEffect(() => {
+    if (show !== null) {
+      const handleClick = () => {
+        setClickHidden(!clickHidden);
+      };
+      show.current.addEventListener("click", handleClick);
+
+    }
+  }, [show]);
+  const [clickHidden, setClickHidden] = useState(false);
+  const [dropDown, setDropDown] = useState(false);
+  function handleOnClickHidden() {
+    setClickHidden(!clickHidden);
+  }
+  function handleDropDown() {
+    setDropDown(!dropDown);
+  }
 
   // path active
-  const [activeLink, setActiveLink] = useState('');
+  const [activeLink, setActiveLink] = useState("");
 
   const location = useLocation();
   useEffect(() => {
     setActiveLink(location.pathname);
   }, [location.pathname]);
-  const [collapsed, setCollapsed] = useState(false);
 
-  const toggleCollapse = () => {
-    setCollapsed(!collapsed);
-  };
+
   return (
-    <aside className={`left-bar-main ${collapsed ? "collapsed" : ""} d-none d-lg-block d-sm-none d-md-none`} >
-      <div className="left-bar-list-menu" >
-        <label onClick={toggleCollapse} ><AiOutlineMenuFold className="left-bar-icon-list"></AiOutlineMenuFold></label>
+    <section className={`row ${clickHidden ? "" : "d-none"}`} >
+      <div className=" col-md-4 nav-bar-md d-lg-none " style={{ zIndex: '7' }}>
+        <div className="nav-bar-logo">
+          <img
+            src={require(`../assets/img/logo.png`)}
+            alt="logo"
+            width={50}
+            className="mt-4"
+          />
+          <div className="text-logo">eStudiez</div>
+        </div>
         <ul>
-          {menuItems.map((item, index) => (
+          {menuItemStudents.map((item, index) => (
             <Link
               key={index}
               to={item.link}
@@ -47,7 +65,7 @@ export const SideBarItem = ({ menuItems }) => {
                 key={index}
                 className={` ${activeLink === `${item.link}` ? 'left-bar-active-item' : ''}`}
 
-                {...(collapsed ? { title: item.content } : {})}
+                
               >
                 <div className="left-bar-item">
                   <span
@@ -64,7 +82,7 @@ export const SideBarItem = ({ menuItems }) => {
             </Link>
           ))}
         </ul>
-        <div className="left-bar-logout hide-title"  {...(collapsed ? { title: 'Logout' } : {})} >
+        <div className="left-bar-logout hide-title" >
           <IoLogOutOutline className="left-bar-icon-logout" /> <span>Logout</span>
         </div>
         <hr />
@@ -86,8 +104,14 @@ export const SideBarItem = ({ menuItems }) => {
           </div>
 
         </div>
-
       </div>
-    </aside>
+      <div
+        className="col-md-8 out-side d-lg-none  "
+        style={{ zIndex: '2' }}
+        onClick={handleOnClickHidden}
+      ></div>
+    </section>
   );
-};
+}
+
+export default NavbarMD;

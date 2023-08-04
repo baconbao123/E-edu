@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 
 import { LoginContext } from './components/Authentication/LoginContext';
 import { useNavigate } from 'react-router-dom';
-import Login from './components/Authentication/Login';
+import Login from './components/Authentication/login';
 import Cookies from 'js-cookie';
 
 import { BrowserRouter as Router} from 'react-router-dom';
