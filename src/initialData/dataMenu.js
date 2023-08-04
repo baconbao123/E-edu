@@ -10,13 +10,16 @@ import FeedBack from '../common/FeedBack/FeedBack';
 import ContactUs from '../common/ContactUs/ContactUs';
 import Setting from '../common/Setting/Setting';
 import Profile from '../common/Profile/Profile'
+import Mark from '../components/StudentLayout/Mark/Mark'
+import Progress from '../components/StudentLayout/Progress/Progress'
+
 import { Route } from 'react-router-dom'
 export const menuItemStudents = [
     { content: 'Home', icon: <AiFillHome />, link: '/', component: <HomePage /> },
     { content: 'Revision Classes', icon: <BsPeople />, link: '/revision' },
     { content: 'Study Resources', icon: <AiOutlineRead />, link: '/resources' },
-    { content: 'Your Marks', icon: <BsBookmarkDash />, link: '/your_mark' },
-    { content: 'Academic Progress', icon: <GiEmptyHourglass />, link: '/progress' },
+    { content: 'Your Marks', icon: <BsBookmarkDash />, link: '/your_mark', component: <Mark /> },
+    { content: 'Academic Progress', icon: <GiEmptyHourglass />, link: '/progress', component: <Progress />},
     { content: 'Feedback', icon: <VscFeedback />, link: '/feedback', component: <FeedBack /> },
     { content: 'Contact Us', icon: <FiPhoneCall />, link: '/contact_us', component: <ContactUs /> },
     { content: 'Setting', icon: <IoSettingsOutline />, link: '/setting', component: <Setting /> },
@@ -26,8 +29,8 @@ export const AllRoutes = [
     { content: 'Home', icon: <AiFillHome />, link: '/', component: <HomePage /> },
     { content: 'Revision Classes', icon: <BsPeople />, link: '/revision' },
     { content: 'Study Resources', icon: <AiOutlineRead />, link: '/resources' },
-    { content: 'Your Marks', icon: <BsBookmarkDash />, link: '/your_mark' },
-    { content: 'Academic Progress', icon: <GiEmptyHourglass />, link: '/progress' },
+    { content: 'Your Marks', icon: <BsBookmarkDash />, link: '/your_mark', component: <Mark /> },
+    { content: 'Academic Progress', icon: <GiEmptyHourglass />, link: '/progress', component: <Progress />},
     { content: 'Feedback', icon: <VscFeedback />, link: '/feedback', component: <FeedBack /> },
     { content: 'Contact Us', icon: <FiPhoneCall />, link: '/contact_us', component: <ContactUs /> },
     { content: 'Setting', icon: <IoSettingsOutline />, link: '/setting', component: <Setting /> },

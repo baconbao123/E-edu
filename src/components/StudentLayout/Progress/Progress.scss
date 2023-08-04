@@ -1,0 +1,61 @@
+@import '../../../../setting';
+
+.progress_master {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+
+    .chooseyear {
+        margin-top: 5px;
+        display: flex;
+        justify-content: left;
+        align-items: center ;
+    }
+    .select {
+        width: 150px;
+    }
+
+    .table_div {
+        margin-top: 30px;
+
+        .filter-icon {
+            cursor: pointer;
+        }
+
+        .content_col1 {
+            display: flex;
+            font-size: 13px;
+
+            .cardprogess {
+                // height: 30px;
+                background-color: rgb(228, 255, 187);
+                
+            }
+
+            .propresssubject {
+                text-align: center;
+                margin-top: 2px;
+            }
+
+            .progresscontent1 {
+                margin-left: 10px;
+
+                .progressdetail {
+                    color: $color_press;
+                }
+                .progresstime {
+                    color: gray;
+                    font-size: 10px;
+                }
+            }
+        }
+        
+        @media only screen and (max-width: 1036px) and (min-width: 250px) {
+            .content_col1 {
+                display: block;
+                font-size: 12px;
+            }
+        }
+        
+    }
+   
+}

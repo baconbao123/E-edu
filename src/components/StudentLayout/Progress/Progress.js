@@ -1,22 +1,21 @@
 import React, { useState } from "react";
 import { Row, Col, Form, Table, Card, Pagination } from 'react-bootstrap';
 import { students } from "../../../initialData/student";
-import './Mark.scss';
-import { progressdatas, markdatas } from "../../../initialData/student";
-import {FiFilter} from 'react-icons/fi'
+import { progressdatas } from "../../../initialData/student";
+import {FiFilter} from 'react-icons/fi' 
 
-const Mark = () => {
+import './Progress.scss'
+const Progress = () => {
     const [showFilter, setShowFilter] = useState(null)
 
     const handleSelectedStatus = () => {
         setShowFilter(!showFilter)
     }
-
   return (
     <div className="progress_master">
       <div className="container">
         <Row>
-          <Col lg={5} md={5}>
+          <Col lg={5}>
             <strong>{students[0].name}</strong>'s learning process.
             <br />
             <div className="row_div">
@@ -64,26 +63,20 @@ const Mark = () => {
               </Row>
             </div>
           </Col>
-          <Col lg={6} md={6}>
-            <div className="avarage-score">
-                <div className="title_avarage">
-                    <span>Avarage Score</span>
-                </div>
-                <div className="circle_score">
-                    80  
-                </div>
-            </div>
-          </Col>
           <div className="table_div">
             <Col lg={12} md={12} xs={12}>
                 <Table striped bordered hover variant="white">
                     <thead>
                         <tr>
                             <th>Module</th>
-                            <th>Mark</th>
-                            <th>Rate</th>
+                            <th>Seesion</th>
+                            <th>Lesson</th>
+                            <th>Teacher</th>
+                            <th>Progress</th>
+                            <th>Date Start</th>
+                            <th>Date End</th>
                             <th>
-                                <div className="d-flex justify-content-between ">
+                                <div className="d-flex justify-content-between">
                                     Status
                                     <div className="filter-icon" onClick={handleSelectedStatus}>
                                         <FiFilter />
@@ -93,19 +86,31 @@ const Mark = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        {markdatas.map((item,index)=>(
+                        {progressdatas.map((item,index)=>(
                             <tr key={index}>
                                 <td>
-                                    <div className="content_colmark">
-                                        <Card border="success" className="cardmark">
-                                            <Card.Title className="marksubject">
+                                    <div className="content_col1">
+                                        <Card border="success" className="cardprogess">
+                                            <Card.Title className="propresssubject">
                                                 {item.subject}
                                             </Card.Title>
                                         </Card>
+                                        <div className="progresscontent1">
+                                            <div className="progressdetail">
+                                                {item.detail}
+                                            </div>
+                                            <div className="progresstime">
+                                                {item.time} 
+                                            </div> 
+                                        </div>
                                     </div>
                                 </td>
-                                <td>{item.mark}/{item.maxmark}</td>
-                                <td>{item.rate}</td>
+                                <td>{item.seesion}</td>
+                                <td>{item.lesson}</td>
+                                <td>{item.teacher}</td>
+                                <td>{item.progress}</td>
+                                <td>{item.datestart}</td>
+                                <td>{item.dateend}</td>
                                 <td>{item.status}</td>
                             </tr>
                         ))}
@@ -132,4 +137,4 @@ const Mark = () => {
   );
 };
 
-export default Mark;
+export default Progress;

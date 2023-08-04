@@ -1,26 +1,83 @@
-@import '../../../../setting';;
+@import '../../../../setting';
 
-.mark_student {
-    color: black;
-    margin-top: 90px;
+.progress_master {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
 
-    .mark_div {
-        background-color: rgb(169, 197, 197);
-        width: 1180px;
-        position: fixed;
-        left: 290px;
-        height: 100%;
+    .chooseyear {
+        margin-top: 5px;
+        display: flex;
+        justify-content: left;
+        align-items: center ;
     }
+    .select {
+        width: 150px;
+    }   
 
-    .col_left {
-        .banner_welcome {
-            height: 160px;
-            width: 690px;
-            background-color: $color_press;
+    .avarage-score {
+        height: 137px;
+        border-radius: 20px;
+        width: 250px;
+        background-color: $bg_sidebar;
+        display: grid;
+        place-items: center; /* căn giữa các phần tử con */
+
+        .circle_score {
+            width: 96px;
+            height: 78px;
+            border-radius: 50%;
+            background-color: #f0f0f0; /* Thay đổi màu nền tùy ý */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 33px;
+            font-weight: 600;
+            color: $color_press;
+            margin-bottom: 10px;
         }
     }
 
-    .col_right {
-        
+    .table_div {
+        margin-top: 30px;
+
+        .filter-icon {
+            cursor: pointer;
+        }
+
+        .content_colmark {
+            display: flex;
+            font-size: 13px;
+
+            .cardmark {
+                width: inherit;
+                height: 30px;
+                background-color: rgb(238, 250, 220);
+                
+            }
+
+            .marksubject {
+                text-align: center;
+                margin-top: 2px;
+            }
+
+            .progresscontent1 {
+                margin-left: 10px;
+
+                .progressdetail {
+                    color: $color_press;
+                }
+                .progresstime {
+                    color: gray;
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+   
+}
+
+@media only screen and (max-width: 768px) and (min-width: 250px) {
+    .avarage-score {
+        margin-top: 20px;
     }
 }
