@@ -5,6 +5,7 @@ import { GiEmptyHourglass } from 'react-icons/gi'
 import { VscFeedback } from 'react-icons/vsc'
 import { FiPhoneCall } from 'react-icons/fi'
 import { IoSettingsOutline } from 'react-icons/io5'
+import {FaRegUser} from 'react-icons/fa'
 import HomePage from '../components/StudentLayout/Home/HomePage'
 import FeedBack from '../common/FeedBack/FeedBack';
 import ContactUs from '../common/ContactUs/ContactUs';
@@ -24,6 +25,10 @@ export const menuItemStudents = [
     { content: 'Contact Us', icon: <FiPhoneCall />, link: '/contact_us', component: <ContactUs /> },
     { content: 'Setting', icon: <IoSettingsOutline />, link: '/setting', component: <Setting /> },
   
+];
+export const menuItemProfile = [
+    {content: 'Profile', icon: <FaRegUser />, link: '/profile', component: <HomePage />},
+    {content: 'Setting', icon: <IoSettingsOutline />, link: '/setting',component: <Setting />}
 ];
 export const AllRoutes = [
     { content: 'Home', icon: <AiFillHome />, link: '/', component: <HomePage /> },

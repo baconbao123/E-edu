@@ -1,7 +1,7 @@
 import avatar4 from '../assets/img/avatar4.png'
 
 export const students = [
-    {name:'Phuong Anh', class:'C22081', imgstu: avatar4},
+    { name: 'Phuong Anh', class: 'C22081', imgstu: avatar4 },
 ]
 
 
@@ -24,3 +24,27 @@ export const markdatas = [
     {subject: 'Physic', mark: '80', maxmark: '100', rate: '50.0', status: 'GOOD'},
 
 ] 
+
+
+
+export const notificationsTopbar = [
+    {
+        status: 'New',
+        notifiItem:
+        [
+            {img_noti: avatar4, name: 'Trung Nguyen', subContent: 'Hello, hey boy !', time: '50 minutes ago'},
+            {img_noti: avatar4, name: 'Trung Nguyen', subContent: 'Hello, hey boy fsd !', time: '50 minutes ago'},
+            {img_noti: avatar4, name: 'Trung Nguyen', subContent: 'Hello, hey boy !', time: '50 minutes ago'},
+            {img_noti: avatar4, name: 'Trung Nguyen', subContent: 'Hello, hey boy !', time: '50 minutes ago'},
+        ]
+    },
+    {
+        status: 'Older',
+        notifiItem:
+        [
+            {img_noti: avatar4, name: 'Trung Nguyen', subContent: 'Hello, hey boy !', time: '50 minutes ago'},
+            {img_noti: avatar4, name: 'Trung Nguyen', subContent: 'Hello, hey boy !', time: '50 minutes ago'},
+        ]
+    },
+   
+]
