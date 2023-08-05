@@ -48,33 +48,33 @@ const HomePage = () => {
                                                 </div>
                                                 <div className="content_task_div">
                                                     <Row >
-                                                        <Col lg={3} md={3} sm={3} xs={12}>
+                                                        <Col lg={3} md={3} sm={3} xs={2}>
                                                             <img className='avatar_task' src={teachers[0].avatar} alt />
 
                                                         </Col>
-                                                        <Col lg={6} md={6} sm={6} xs={7}>
+                                                        <Col lg={6} md={6} sm={6} xs={6}>
                                                             <ul className="ul_task">
                                                                 <strong className="name_teacher">{teachers[0].name}</strong>
                                                                 <li className="task_name">Please download this file to do the  exercise</li>
                                                             </ul>
                                                         </Col>
-                                                        <Col lg={3} md={3} sm={3} xs={5}>
-                                                            <span>9.54 AM</span>
+                                                        <Col lg={3} md={3} sm={3} xs={4}>
+                                                            <span className="time-task">9.54 AM</span>
                                                         </Col>
                                                     </Row>
                                                     <Row >
-                                                        <Col lg={3} md={3} sm={3} xs={12}>
+                                                        <Col lg={3} md={3} sm={3} xs={2}>
                                                             <img className='avatar_task' src={teachers[0].avatar} alt />
 
                                                         </Col>
-                                                        <Col lg={6} md={6} sm={6} xs={7}>
+                                                        <Col lg={6} md={6} sm={6} xs={6}>
                                                             <ul className="ul_task">
                                                                 <strong className="name_teacher">{teachers[0].name}</strong>
                                                                 <li className="task_name">Please download this file to do the  exercise</li>
                                                             </ul>
                                                         </Col>
-                                                        <Col lg={3} md={3} sm={3} xs={5}>
-                                                            <span>9.54 AM</span>
+                                                        <Col lg={3} md={3} sm={3} xs={4}>
+                                                            <span className="time-task">9.54 AM</span>
                                                         </Col>
                                                     </Row>
                                                 </div>

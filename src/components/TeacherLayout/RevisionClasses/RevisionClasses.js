@@ -61,7 +61,7 @@ const RevisionClasses = () => {
               </Row>
             </div>
           </Col>
-          <div className="table_div">
+          <Row>
             <Col lg={12} md={12} xs={12}>
               <div className="span-add-edit">
                 <div className="span-add">
@@ -72,6 +72,8 @@ const RevisionClasses = () => {
                 </div>
               </div>
             </Col>
+          </Row>
+          <div className="table_div">
             <Col lg={12} md={12} xs={12} className="mt-2">
                 <Table striped bordered hover variant="white">
                     <thead>

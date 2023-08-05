@@ -12,9 +12,27 @@
     }
     .select {
         width: 150px;
+
+        .select-form {
+            height: 31px;
+        }
     }
 
     .table_div {
+
+        @media screen and (min-width: 568px) and (max-width: 830px) {
+            width: 624px;
+            overflow-x: scroll;
+            overflow-y: hidden;
+        }
+
+    
+        @media screen and (min-width: 300px) and (max-width: 567px) {
+            width: 340px;
+            overflow-x: scroll;
+            overflow-y: hidden;
+        }
+        
         margin-top: 30px;
 
         .filter-icon {

@@ -47,7 +47,7 @@ function App() {
 
                 {/* {isLogin ? <SideNavPanel menuItems={menuItems} allRoutes={allRoutes}/> : filename !== 'login' ? <Login /> : ''} */}
                 
-                {isLogin ? <SideNavPanel menuItems={menuItemsTeachers}/> : filename !== 'login' ? <Login /> : ''}
+                {isLogin ? <SideNavPanel menuItems={menuItemStudents}/> : filename !== 'login' ? <Login /> : ''}
 
             </LoginContext.Provider>
 

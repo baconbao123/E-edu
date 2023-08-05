@@ -59,7 +59,7 @@ const HomePageTeacher = () => {
                                                             </ul>
                                                         </Col>
                                                         <Col lg={3} md={3} sm={3} xs={2}>
-                                                            <span>9.54 AM</span>
+                                                            <span className="time-task">9.54 AM</span>
                                                         </Col>
                                                     </Row>
                                                     <Row>
@@ -74,7 +74,7 @@ const HomePageTeacher = () => {
                                                                 </ul>
                                                             </Col>
                                                             <Col lg={3} md={3} sm={3} xs={2}>
-                                                                <span>9.54 AM</span>
+                                                                <span className="time-task">9.54 AM</span>
                                                             </Col>
                                                     </Row>
                                                 </div>

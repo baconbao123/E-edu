@@ -20,13 +20,13 @@ const Progress = () => {
             <br />
             <div className="row_div">
               <Row>
-                <Col lg={5}>
+                <Col lg={6} className="mt-1">
                   <span className="chooseyear">Choose year</span>
                 </Col>
-                <Col lg={7}>
+                <Col lg={6} className="mt-1">
                   <div className="row-select">
                     <section className="select">
-                      <Form.Select defaultValue="">
+                      <Form.Select className="select-form">
                         <option value="">All Years</option>
                         {/* {sortedYears} */}
                       </Form.Select>
@@ -34,26 +34,26 @@ const Progress = () => {
                   </div>
                 </Col>
 
-                <Col lg={5}>
+                <Col lg={6} className="mt-1">
                   <span className="chooseyear">Choose semester</span>
                 </Col>
-                <Col lg={7}>
+                <Col lg={6} className="mt-1">
                   <div className="row-select">
                     <section className="select">
-                      <Form.Select defaultValue="">
+                      <Form.Select className="select-form">
                         <option value="">Semester 1</option>
                         {/* {sortedYears} */}
                       </Form.Select>
                     </section>
                   </div>
                 </Col>
-                <Col lg={5}>
+                <Col lg={6} className="mt-1">
                     <span className="chooseyear">Choose Subject</span>
                 </Col>
-                <Col lg={7}>
+                <Col lg={6} className="mt-1">
                     <div className="row-select">
                     <section className="select">
-                        <Form.Select defaultValue="" className="">
+                        <Form.Select className="select-form">
                         <option value="">Subject</option>
                         {/* {sortedYears} */}
                         </Form.Select>
