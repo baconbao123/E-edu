@@ -55,8 +55,8 @@
         }
 
     
-        @media screen and (min-width: 300px) and (max-width: 567px) {
-            width: 340px;
+        @media screen and (min-width: 280px) and (max-width: 567px) {
+            width: 253px;
             overflow-x: scroll;
             overflow-y: hidden;
         }
@@ -72,8 +72,9 @@
             font-size: 13px;
 
             .cardprogess {
-                // height: 30px;
-                background-color: rgb(228, 255, 187);
+                height: 31px;
+                background-color: #F0FFF3;
+                padding: 1.5px 10px;
                 
             }
 

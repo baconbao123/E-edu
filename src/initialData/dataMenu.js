@@ -13,6 +13,7 @@ import Setting from '../common/Setting/Setting';
 import Profile from '../common/Profile/Profile'
 import ViewMarks from '../components/ParentLayout/ViewMarks/ViewMarks'
 import ProgressParent from '../components/ParentLayout/ProgressParent/ProgressParent'
+import HomePageParent from '../components/ParentLayout/ParentHome/HomePageParent'
 
 import { Route } from 'react-router-dom'
 import Mark from '../components/StudentLayout/Mark/Mark'
@@ -50,7 +51,7 @@ export const AllRoutesStudent = [
 ];
 
 export const menuItemsParent = [
-    { content: 'Home ', icon: <AiFillHome />, link: '/homeparent', component: <h1>homeparent</h1> },
+    { content: 'Home ', icon: <AiFillHome />, link: '/homeparent', component: <HomePageParent /> },
     { content: 'View marks', icon: <BsBookmarkDash />, link: '/viewmark', component: <ViewMarks /> },
     { content: 'Academic Progress', icon: <GiEmptyHourglass />, link: '/studentprogress', component: < ProgressParent /> },
     { content: 'Contact Us', icon: <FiPhoneCall />, link: '/contact_us', component: <ContactUs /> },
@@ -62,7 +63,7 @@ export const menuItemsParent = [
 
 
 export const AllRoutesParent = [
-    { content: 'Home ', icon: <AiFillHome />, link: '/homeparent', component: <h1>homeparent</h1> },
+    { content: 'Home ', icon: <AiFillHome />, link: '/homeparent', component: <HomePageParent /> },
     { content: 'View marks', icon: <BsBookmarkDash />, link: '/viewmark', component: <ViewMarks /> },
     { content: 'Academic Progress', icon: <GiEmptyHourglass />, link: '/studentprogress', component: < ProgressParent /> },
     { content: 'Feedback', icon: <VscFeedback />, link: '/feedback', component: <FeedBack /> },
