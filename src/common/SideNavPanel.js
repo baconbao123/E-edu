@@ -10,14 +10,13 @@ import { students, notifications } from '../initialData/student';
 import './style.scss'
   ;
 export const SideNavPanel = ({ menuItems, allRoutes, menuItemsTeachers }) => {
-  console.log(allRoutes);
+
 
 
   return (
     <Container fluid >
-
       <div className="edu-master " >
-        <Topbar />
+        <Topbar menuItems={menuItems}/>
         <Row>
           <Col md={2}>
             <SideBarItem menuItems={menuItems} />
@@ -33,7 +32,7 @@ export const SideNavPanel = ({ menuItems, allRoutes, menuItemsTeachers }) => {
             
             )} */}
 
-            {menuItems.map((menuItem, index)=>(
+            {allRoutes.map((menuItem, index)=>(
               <Route key={index} path={menuItem.link} element={menuItem.component} />
             ))}
 

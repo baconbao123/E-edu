@@ -11,7 +11,7 @@ import { AiOutlineMenuFold } from 'react-icons/ai'
 import { TbDeviceImacSearch } from 'react-icons/tb'
 import { menuItemStudents } from "../initialData/dataMenu";
 
-function NavbarMD({ show }) {
+function NavbarMD({ show ,menuItems }) {
   useEffect(() => {
     AOS.init({ once: true }); // Initialize AOS with the "once" option set to true
   }, []);
@@ -56,7 +56,7 @@ function NavbarMD({ show }) {
           <div className="text-logo">eStudiez</div>
         </div>
         <ul>
-          {menuItemStudents.map((item, index) => (
+          {menuItems.map((item, index) => (
             <Link
               key={index}
               to={item.link}

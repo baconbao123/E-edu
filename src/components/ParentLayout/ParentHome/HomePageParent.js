@@ -1,6 +1,6 @@
 import React from "react"
 import {Row,Col, ProgressBar } from 'react-bootstrap'
-import './Home.scss'
+import './HomePageParent.scss'
 
 import {students, notifications} from '../../../initialData/student'
 import {teachers} from '../../../initialData/teacher'
@@ -12,9 +12,9 @@ import {MdKeyboardArrowRight} from 'react-icons/md'
 
 import imgstudent from '../../../assets/img/schoolchildren.png'
 
-const HomePage = () => {
+const HomePageParent = () => {
     return (
-        <div className="homepage_student">
+        <div className="homepage_parent">
             <div className="homepage_div">
                 <div className="container">
                     <Row>
@@ -22,13 +22,7 @@ const HomePage = () => {
                             <div className="banner_welcome ">
                                 <Col lg={8} md={9} sm={8} xs={8}>
                                     <div className="banner_content">
-                                        <span className="content_wel">Welcom student, {students[0].name} <PiHandWavingFill className="icon_hand"/> </span>
-                                        <br/>
-                                        <div className="content_small">
-                                            <span>You're learn <strong>70%</strong> of your goal this week</span>
-                                            <br/>
-                                            <span>Keep it up and improve your progress</span>
-                                        </div>
+                                        <span className="content_wel">Welcom {students[0].name}'parents  <PiHandWavingFill className="icon_hand"/> </span>
                                     </div>
                                 </Col>
                                 <Col lg={4} md={3} sm={4} xs={3}>
@@ -39,11 +33,11 @@ const HomePage = () => {
                             </div>
                             <div className="prepare_progress">
                                 <Row className="d-flex justify-space-between">
-                                    <Col lg={7} md={8} sm={12} xs={12}>
+                                    <Col lg={12} md={12} sm={12} xs={12}>
                                         <div className="content_prepare_div">
                                             <div className="label_header">
-                                                <label className="label_content">Tasks</label>
-                                                <a className="label_view" ><strong>View all</strong></a>
+                                                <label className="label_content">Notification</label>
+                                                <a className="label_view"><strong>View all</strong></a>
                                             </div>
                                             <div className="content_prepare">
                                                 <div className="content_task_div">
@@ -78,29 +72,6 @@ const HomePage = () => {
                                                         </Col>
                                                     </Row>
                                                 </div>
-                                            </div>
-                                        </div>
-                                    </Col>
-                                    <Col lg={1} className="d-lg-block d-none d-md-none"></Col>
-                                    <Col lg={4} md={4} sm={12}>
-                                        <div className="content_progress">
-                                            <Row>
-                                                <span className="content_label">The learning process</span>
-                                            </Row>
-                                            <div className="content_progress_div">
-                                                <Row>
-                                                    <Col lg={7} md={7} sm={7} xs={7} className="title_subject">
-                                                        <div className="title_subject_div">
-                                                            <label>Mathematics</label><br/>
-                                                            <span>Unit 3</span>
-                                                        </div>
-                                                    </Col>
-                                                    <Col lg={5} md={5} sm={5} xs={5} className="progress_subject">
-                                                        <div className="circular-progress">
-                                                            <ProgressBar className="progress_posi" animated now={78} />
-                                                        </div>
-                                                    </Col>
-                                                </Row>
                                             </div>
                                         </div>
                                     </Col>
@@ -207,5 +178,5 @@ const HomePage = () => {
     )
 }
 
-export default HomePage
+export default HomePageParent
 

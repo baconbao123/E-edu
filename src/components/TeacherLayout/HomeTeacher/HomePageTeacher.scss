@@ -14,6 +14,7 @@
             padding-left: 40px;
             cursor: default;
 
+
             .banner_content {
                 height: 130px;
                 // background-color: gray;
@@ -26,19 +27,43 @@
                     font-size: 27px;
                     font-family: 'Open Sans', sans-serif;
 
+                    @media screen and (min-width: 568px) and (max-width: 830px) {
+                        font-size: 22px;
+                    }
+
+                    @media screen and (min-width: 300px) and (max-width: 521px) {
+                        font-size: 16px;
+                    }
+
                 }
 
                 .icon_hand {
                     color: rgb(253, 222, 21);
                     font-size: 35px;
                     margin-top: -5px;
+
+                    @media screen and (min-width: 300px) and (max-width: 521px) {
+                        font-size: 22px;
+                    }
                 }
 
                 .content_small {
                     padding-top: 15px;
                     font-family: 'Open Sans', sans-serif;
                     letter-spacing: 1px;
+
+                    @media screen and (min-width: 568px) and (max-width: 830px) {
+                        letter-spacing: 0.5px;
+                        padding-top: 8px;
+                    }
+
+                    @media screen and (min-width: 300px) and (max-width: 521px) {
+                        padding-top: 7px;
+                        font-size: 12px;
+                    }
+
                 }
+                
             }
 
             .img_pos {
@@ -46,11 +71,15 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
+            }
                 .img_teacher {
                     height: 190px;
                     padding-bottom: 5px;
-                }
-            }
+                    @media screen and (min-width: 300px) and (max-width: 521px) {
+                        height: 120px;
+                        padding-right: 30px;
+                    }
+                }          
         }
 
         .teacher-board {
@@ -114,6 +143,18 @@
                             color: gray;
                         }
                     }
+
+                    .time-task {
+                        color: gray;
+                        display: flex;
+                        justify-content: end;
+                        padding-right: 10px;
+
+                        @media screen and (min-width: 300px) and (max-width: 521px) {
+                            font-size: 13px;
+                        }
+                    }
+                    
                 }
             }
             
@@ -363,4 +404,5 @@
         margin-top: 30px;
     }
 }
+
 

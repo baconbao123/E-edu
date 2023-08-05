@@ -12,6 +12,9 @@
     }
     .select {
         width: 150px;
+        .select-form {
+            height: 31px;
+        }
     }   
 
     .avarage-score {
@@ -39,6 +42,18 @@
 
     .table_div {
         margin-top: 30px;
+        @media screen and (min-width: 568px) and (max-width: 830px) {
+            width: 624px;
+            overflow-x: scroll;
+            overflow-y: hidden;
+        }
+
+    
+        @media screen and (min-width: 300px) and (max-width: 567px) {
+            width: 340px;
+            overflow-x: scroll;
+            overflow-y: hidden;
+        }
 
         .filter-icon {
             cursor: pointer;
@@ -50,9 +65,10 @@
 
             .cardmark {
                 width: inherit;
-                height: 30px;
-                background-color: rgb(238, 250, 220);
-                
+                height: 100%;
+                background-color: #F0FFF3;
+                padding: 5px 10px;
+                padding: 1.5px 10px;
             }
 
             .marksubject {

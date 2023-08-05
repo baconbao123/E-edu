@@ -1,28 +1,29 @@
 @import '../../../../setting';
 
-.homepage_student {
+.homepage_parent {
     color: black;
 
     .col_left {
         .banner_welcome {
-            height: 130px;
+            height: 85px;
             border-radius: 30px;
             background-color: $color_press;
             display: flex;
             justify-content: center;
             align-items: center;
-            padding-left: 40px;
             cursor: default;
 
-            @media screen and (min-width: 280px) and (max-width: 567px) {
+            @media screen and (min-width: 300px) and (max-width: 567px) {
                 padding-left: 0px !important;
             }
 
             .banner_content {
                 height: 130px;
-                // background-color: gray;
                 color: white;
-                padding-top: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
 
 
                 .content_wel {
@@ -30,19 +31,21 @@
                     font-size: 27px;
                     font-family: 'Open Sans', sans-serif;
 
+
+
                     @media screen and (min-width: 769px) and (max-width: 830px) {
-                        font-size: 22px;
+                        font-size: 25px;
                         font-weight: 700;
                     }
 
                     @media screen and (min-width: 568px) and (max-width: 768px) {
-                        font-size: 18px;
+                        font-size: 23px;
                         font-weight: 700;
                     }
 
 
                     @media screen and (min-width: 280px) and (max-width: 567px) {
-                        font-size: 15px;
+                        font-size: 17px;
                     }
 
                 }
@@ -62,22 +65,6 @@
                     }
                 }
 
-                .content_small {
-                    padding-top: 15px;
-                    font-family: 'Open Sans', sans-serif;
-                    letter-spacing: 1px;
-
-                    @media screen and (min-width: 568px) and (max-width: 768px) {
-                        font-size: 15px;
-                    }
-
-                    @media screen and (min-width: 280px) and (max-width: 567px) {
-                        padding-top: 5px;
-                        font-size: 10px;
-                        letter-spacing: 0px;
-
-                    }
-                }
             }
 
             .img_pos {
@@ -86,7 +73,7 @@
                 align-items: center;
 
                 .img_children {
-                    height: 190px;
+                    height: 153px;
                     padding-bottom: 5px;
 
                     @media screen and (min-width: 568px) and (max-width: 768px) {
@@ -94,7 +81,7 @@
                     }
 
                     @media screen and (min-width: 280px) and (max-width: 567px) {
-                        height: 120px;
+                        height: 107px;
                     }
                 }
             }
@@ -114,14 +101,7 @@
                     display: flex;
                     align-items: end;
                     justify-content: space-between;
-                    padding: 10px 20px;
-
-                    @media screen and (min-width: 280px) and (max-width: 567px) {
-                        padding: 10px 10px;
-
-                    }
-
-
+                    padding: 10px 17px;
 
                     .label_content {
                         font-weight: 600;
@@ -134,14 +114,14 @@
                     }
 
                 }
-                
+
                 .content_prepare {
-                    font-family: 'Open Sans', sans-serif;
+                    font-family: 'Open Sans', sans-s200f;
                     padding-left: 10px;
-                    padding-top: 10px;
                     height: 200px;
                     overflow-y: auto;
                     overflow-x: hidden;
+
 
 
 
@@ -151,10 +131,6 @@
                     height: 100%;
                     border-radius: 30px;
                     margin-top: 20px;
-
-                    @media screen and (min-width: 280px) and (max-width: 567px) {
-                        margin-top: 10px;
-                    }
 
 
                     .avatar_task {
@@ -176,6 +152,7 @@
 
                         .name_teacher {
                             font-size: 18px;
+
                             @media screen and (min-width: 280px) and (max-width: 567px) {
                                 font-size: 15px;
                             }
@@ -183,8 +160,10 @@
 
                         .task_name {
                             color: gray;
+
                             @media screen and (min-width: 280px) and (max-width: 567px) {
-                                font-size: 13px;
+                                font-size: 14px;
+                                padding-right: 10px;
                             }
                         }
                     }
@@ -192,67 +171,15 @@
 
                     .time-task {
                         color: gray;
+
                         @media screen and (min-width: 280px) and (max-width: 567px) {
-                            font-size: 13px;
+                            font-size: 14px;
                         }
                     }
                 }
 
             }
 
-            .content_progress {
-                height: 251px;
-                width: 100%;
-                background-color: $bg_sidebar;
-                border-radius: 10px;
-
-
-                .content_label {
-                    font-size: 17px;
-                    font-weight: bold;
-                    font-family: 'Open Sans', sans-serif;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    padding-top: 7px;
-                }
-
-                .content_progress_div {
-                    // background-color: rgb(233, 139, 17);
-                    width: 100%;
-                    height: 220px;
-                    padding: 5px 15px;
-                    overflow-y: auto;
-                    overflow-x: hidden;
-
-                    @media screen and (min-width: 280px) and (max-width: 567px) {
-                        height: 200px;
-                    }
-
-                    .title_subject_div {
-                        padding-top: 10px;
-
-                    }
-
-                    .progress_subject {
-                        padding-top: 10px;
-                        padding-left: 18px;
-
-                        .circular-progress {
-                            padding-left: 5px;
-                            width: 50px;
-                            height: 45px;
-                            border-radius: 100%;
-                        }
-
-                        .progress_posi {
-                            width: 100%;
-                            height: 100%;
-                            border-radius: 100%;
-                        }
-                    }
-                }
-            }
 
 
             .content_toprank {

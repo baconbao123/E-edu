@@ -14,51 +14,67 @@
         width: 150px;
     }
 
+    .span-add-edit {
+        margin-top: 10px;
+        display: flex;
+        justify-content: end;
+        color: white;
+        cursor: pointer;
+        
+        .span-add {
+            background-color: $color_press;
+            width: 60px;
+            margin-right: 10px;
+            border-radius: 10px;
+
+            .add-title {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+        .span-edit {
+            background-color: #E55858;
+            border-radius: 10px;
+            width: 60px;
+            .edit-title {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+
     .table_div {
-        margin-top: 30px;
+
+        @media screen and (min-width: 568px) and (max-width: 830px) {
+            width: 624px;
+            overflow-x: scroll;
+            overflow-y: hidden;
+        }
+
+    
+        @media screen and (min-width: 280px) and (max-width: 567px) {
+            width: 253px;
+            overflow-x: scroll;
+            overflow-y: hidden;
+        }
 
         .filter-icon {
             cursor: pointer;
         }
 
-        .span-add-edit {
-            display: flex;
-            justify-content: end;
-            color: white;
-            cursor: pointer;
-            
-            .span-add {
-                background-color: $color_press;
-                width: 60px;
-                margin-right: 10px;
-                border-radius: 10px;
-
-                .add-title {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                }
-            }
-
-            .span-edit {
-                background-color: #E55858;
-                border-radius: 10px;
-                width: 60px;
-                .edit-title {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                }
-            }
-        }
+        
 
         .content_col1 {
             display: flex;
             font-size: 13px;
 
             .cardprogess {
-                // height: 30px;
-                background-color: rgb(228, 255, 187);
+                height: 31px;
+                background-color: #F0FFF3;
+                padding: 1.5px 10px;
                 
             }
 
