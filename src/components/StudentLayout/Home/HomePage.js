@@ -82,7 +82,7 @@ const HomePage = () => {
                                         </div>
                                     </Col>
                                     <Col lg={1} className="d-lg-block d-none d-md-none"></Col>
-                                    <Col lg={4} md={4} sm={12}>
+                                    <Col lg={4} md={4} sm={12} xs={12}>
                                         <div className="content_progress">
                                             <Row>
                                                 <span className="content_label">The learning process</span>
