@@ -64,7 +64,7 @@ const Progress = () => {
             </div>
           </Col>
           <div className="table_div">
-            <Col lg={12} md={12} xs={12}>
+            <Col lg={12} md={12} sm={12} xs={12}>
                 <Table striped bordered hover variant="white">
                     <thead>
                         <tr>
