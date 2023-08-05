@@ -9,6 +9,29 @@ export const notifications = [
     {img_noti: avatar4, title: 'Meeting',time: '8 A.M - 9 A.M', date: '18-19th July 2222',message:'Interview in a company '}
 ]
 
+export const classesDatas = [
+    {subject: 'Math',title: 'HTML, CSS, Js(LT)', time: '7:45 PM - 9PM', class: 'C2208I1', room: 'Lab1', teacher: 'Khac Nguyen', dateCreated: '08/01/2023 ', dateExp:'No'},
+    {subject: 'Math',title: 'HTML, CSS, Js(LT)', time: '7:45 PM - 9PM', class: 'C2208I1', room: 'Lab1', teacher: 'Khac Nguyen', dateCreated: '08/01/2023 ', dateExp:'No'},
+    {subject: 'Math',title: 'HTML, CSS, Js(LT)', time: '7:45 PM - 9PM', class: 'C2208I1', room: 'Lab1', teacher: 'Khac Nguyen', dateCreated: '08/01/2023 ', dateExp:'No'},
+    {subject: 'Math',title: 'HTML, CSS, Js(LT)', time: '7:45 PM - 9PM', class: 'C2208I1', room: 'Lab1', teacher: 'Khac Nguyen', dateCreated: '08/01/2023 ', dateExp:'No'},
+    {subject: 'Math',title: 'HTML, CSS, Js(LT)', time: '7:45 PM - 9PM', class: 'C2208I1', room: 'Lab1', teacher: 'Khac Nguyen', dateCreated: '08/01/2023 ', dateExp:'No'},
+    {subject: 'Math',title: 'HTML, CSS, Js(LT)', time: '7:45 PM - 9PM', class: 'C2208I1', room: 'Lab1', teacher: 'Khac Nguyen', dateCreated: '08/01/2023 ', dateExp:'No'}
+]
+export const resourceDatas = [
+    {subject: 'Math',title: 'HTML, CSS, Js(LT)', img_doc: 'doc1.png'},
+    {subject: 'Math',title: 'HTML, CSS, Js(LT)', img_doc: 'doc2.png'},
+    {subject: 'Math',title: 'HTML, CSS, Js(LT)', img_doc: 'doc3.png'},
+    {subject: 'Math',title: 'HTML, CSS, Js(LT)', img_doc: 'doc4.png'},
+    {subject: 'Math',title: 'HTML, CSS, Js(LT)', img_doc: 'doc3.png'},
+    {subject: 'Math',title: 'HTML, CSS, Js(LT)', img_doc: 'doc4.png'},
+    {subject: 'Math',title: 'HTML, CSS, Js(LT)', img_doc: 'doc5.png'},
+    {subject: 'Math',title: 'HTML, CSS, Js(LT)', img_doc: 'doc1.png'},
+    {subject: 'Math',title: 'HTML, CSS, Js(LT)', img_doc: 'doc3.png'},
+    {subject: 'Math',title: 'HTML, CSS, Js(LT)', img_doc: 'doc4.png'},
+    {subject: 'Math',title: 'HTML, CSS, Js(LT)', img_doc: 'doc5.png'},
+    {subject: 'Math',title: 'HTML, CSS, Js(LT)', img_doc: 'doc1.png'},
+]
+
 export const progressdatas = [
     {subject: 'Math',detail: 'HTML, CSS, Js(LT)', time: '7:45 PM - 9PM', seesion: '1', lesson: '10', teacher: 'Khac Nguyen', progress: '10%', datestart: '8/1/2023', dateend: '8/3/2023', status: 'Scheduled'},
     {subject: 'Math',detail: 'HTML, CSS, Js(LT)', time: '7:45 PM - 9PM', seesion: '1', lesson: '10', teacher: 'Khac Nguyen', progress: '10%', datestart: '8/1/2023', dateend: '8/3/2023', status: 'Completed'},
