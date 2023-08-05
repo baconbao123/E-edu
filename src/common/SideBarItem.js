@@ -8,9 +8,15 @@ import { BsPeople } from 'react-icons/bs'
 import { AiOutlineMenuFold } from 'react-icons/ai'
 import { TbDeviceImacSearch } from 'react-icons/tb'
 import './style.scss'
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 import Cookies from "js-cookie";
 import Swal from "sweetalert2";
 export const SideBarItem = ({ menuItems }) => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   const [activeItem, setActiveItem] = useState(null);
   console.log('check menu items from side', menuItems);
   // const handleClickActive = (itemId) => {
@@ -49,8 +55,8 @@ export const SideBarItem = ({ menuItems }) => {
   
   }
   return (
-    <aside className={`left-bar-main ${collapsed ? "collapsed" : ""} 	d-none d-sm-block`}>
-      <div className="left-bar-list-menu">
+    <aside className={`left-bar-main ${collapsed ? "collapsed" : ""} d-none d-lg-block d-sm-none d-md-none`} >
+      <div className="left-bar-list-menu" >
         <label onClick={toggleCollapse} ><AiOutlineMenuFold className="left-bar-icon-list"></AiOutlineMenuFold></label>
         <ul>
           {menuItems.map((item, index) => (

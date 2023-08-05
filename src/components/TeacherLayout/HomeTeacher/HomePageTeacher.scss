@@ -1,6 +1,6 @@
 @import '../../../../setting';
 
-.homepage_student {
+.homepage_teacher {
     color: black;
 
     .col_left {
@@ -14,9 +14,6 @@
             padding-left: 40px;
             cursor: default;
 
-            @media screen and (min-width: 300px) and (max-width: 567px) {
-                padding-left: 0px!important;
-            }
 
             .banner_content {
                 height: 130px;
@@ -30,19 +27,12 @@
                     font-size: 27px;
                     font-family: 'Open Sans', sans-serif;
 
-                    @media screen and (min-width: 769px) and (max-width: 830px) {
+                    @media screen and (min-width: 568px) and (max-width: 830px) {
                         font-size: 22px;
-                        font-weight: 700;
                     }
 
-                    @media screen and (min-width: 568px) and (max-width: 768px) {
-                        font-size: 18px;
-                        font-weight: 700;
-                    }
-
-                        
-                    @media screen and (min-width: 300px) and (max-width: 567px) {
-                        font-size: 15px;
+                    @media screen and (min-width: 300px) and (max-width: 521px) {
+                        font-size: 16px;
                     }
 
                 }
@@ -52,13 +42,8 @@
                     font-size: 35px;
                     margin-top: -5px;
 
-                    
-                    @media screen and (min-width: 568px) and (max-width: 768px) {
-                        font-size: 24px;
-                    }
-
-                    @media screen and (min-width: 300px) and (max-width: 567px) {
-                        display: none;
+                    @media screen and (min-width: 300px) and (max-width: 521px) {
+                        font-size: 22px;
                     }
                 }
 
@@ -67,39 +52,38 @@
                     font-family: 'Open Sans', sans-serif;
                     letter-spacing: 1px;
 
-                    @media screen and (min-width: 568px) and (max-width: 768px) {
-                        font-size: 15px;
+                    @media screen and (min-width: 568px) and (max-width: 830px) {
+                        letter-spacing: 0.5px;
+                        padding-top: 8px;
                     }
 
-                    @media screen and (min-width: 300px) and (max-width: 567px) {
+                    @media screen and (min-width: 300px) and (max-width: 521px) {
+                        padding-top: 7px;
                         font-size: 12px;
-                        letter-spacing: 0px;
-
                     }
+
                 }
+                
             }
 
             .img_pos {
+                height: 160px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                .img_children {
+            }
+                .img_teacher {
                     height: 190px;
                     padding-bottom: 5px;
-
-                    @media screen and (min-width: 568px) and (max-width: 768px) {
-                        height: 160px;
+                    @media screen and (min-width: 300px) and (max-width: 521px) {
+                        height: 120px;
+                        padding-right: 30px;
                     }
-
-                    @media screen and (min-width: 300px) and (max-width: 567px) {
-                       height: 140px;
-                    }
-                }
-            }
+                }          
         }
 
-        .prepare_progress {
-            margin-top: 20px;
+        .teacher-board {
+            margin-top: 60px;
 
 
             .content_prepare_div {
@@ -137,19 +121,14 @@
                 .content_task_div {
                     height: 100%;
                     border-radius: 30px;
-                    margin-top: 20px;
+                    margin-top: 10px;
 
 
                     .avatar_task {
                         padding-left: 10px;
                         width: 90px;
                         height: 60px;
-                        @media screen and (min-width: 300px) and (max-width: 567px) {
-                            padding-left: 0px;
-                            width: 59px;
-                            height: 54px;
-                            padding-top: 6px;
-                        }
+                        
                     }
 
                     .ul_task {
@@ -165,70 +144,23 @@
                         }
                     }
 
-
                     .time-task {
                         color: gray;
-                    }
-                }
+                        display: flex;
+                        justify-content: end;
+                        padding-right: 10px;
 
-            }
-
-            .content_progress {
-                height: 251px;
-                width: 100%;
-                background-color: $bg_sidebar;
-                border-radius: 10px;
-                
-
-                .content_label {
-                    font-size: 17px;
-                    font-weight: bold;
-                    font-family: 'Open Sans', sans-serif;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    padding-top: 7px;
-                }
-
-                .content_progress_div {
-                    // background-color: rgb(233, 139, 17);
-                    width: 100%;
-                    height: 220px;
-                    padding: 5px 15px;
-                    overflow-y: auto;
-                    overflow-x: hidden;
-
-                    @media screen and (min-width: 300px) and (max-width: 567px) {
-                        height: 200px;
-                    }
-
-                    .title_subject_div {
-                        padding-top: 10px;
-
-                    }
-
-                    .progress_subject {
-                        padding-top: 10px;
-                        padding-left: 18px;
-                        .circular-progress {
-                            padding-left: 5px;
-                            width: 50px;
-                            height: 45px;
-                            border-radius: 100%;
-                        }
-                        
-                        .progress_posi {
-                            width: 100%;
-                            height: 100%;
-                            border-radius: 100%;
+                        @media screen and (min-width: 300px) and (max-width: 521px) {
+                            font-size: 13px;
                         }
                     }
+                    
                 }
             }
             
 
             .content_toprank {
-                margin-top: 20px;
+                // margin-top: 20px;
                 height: 100%;
                 width: 100%;
                 background-color: $bg_sidebar;
@@ -467,8 +399,10 @@
         }       
     }
 }
-@media only screen and (max-width: 577px){
-    .content_progress {
+@media only screen and (max-width: 820px){
+    .content_toprank {
         margin-top: 30px;
     }
 }
+
+

@@ -12,36 +12,14 @@
     }
     .select {
         width: 150px;
+
         .select-form {
             height: 31px;
-        }
-    }   
-
-    .avarage-score {
-        height: 137px;
-        border-radius: 20px;
-        width: 250px;
-        background-color: $bg_sidebar;
-        display: grid;
-        place-items: center; /* căn giữa các phần tử con */
-
-        .circle_score {
-            width: 96px;
-            height: 78px;
-            border-radius: 50%;
-            background-color: #f0f0f0; /* Thay đổi màu nền tùy ý */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 33px;
-            font-weight: 600;
-            color: $color_press;
-            margin-bottom: 10px;
         }
     }
 
     .table_div {
-        margin-top: 30px;
+
         @media screen and (min-width: 568px) and (max-width: 830px) {
             width: 624px;
             overflow-x: scroll;
@@ -54,23 +32,24 @@
             overflow-x: scroll;
             overflow-y: hidden;
         }
+        
+        margin-top: 30px;
 
         .filter-icon {
             cursor: pointer;
         }
 
-        .content_colmark {
+        .content_col1 {
             display: flex;
             font-size: 13px;
 
-            .cardmark {
-                width: inherit;
-                height: 30px;
-                background-color: rgb(238, 250, 220);
+            .cardprogess {
+                // height: 30px;
+                background-color: rgb(228, 255, 187);
                 
             }
 
-            .marksubject {
+            .propresssubject {
                 text-align: center;
                 margin-top: 2px;
             }
@@ -87,12 +66,14 @@
                 }
             }
         }
+        
+        @media only screen and (max-width: 1036px) and (min-width: 250px) {
+            .content_col1 {
+                display: block;
+                font-size: 12px;
+            }
+        }
+        
     }
    
-}
-
-@media only screen and (max-width: 768px) and (min-width: 250px) {
-    .avarage-score {
-        margin-top: 20px;
-    }
 }

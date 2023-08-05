@@ -1,5 +1,6 @@
 import './App.scss';
-import { menuItemStudents,  AllRoutesStudent,AllRoutesParent,menuItemsParent } from './initialData/dataMenu';
+import { menuItemStudents,  AllRoutesStudent,AllRoutesParent,menuItemsParent,menuItemTeachers ,AllRoutesTeachers} from './initialData/dataMenu';
+
 import { useEffect, useState } from 'react';
 
 import { LoginContext } from './components/Authentication/LoginContext';
@@ -19,6 +20,8 @@ function App() {
     const [menuItems,setMenuItems] = useState();
     const [allRoutes,setAllRoutes]= useState();
 
+   
+    const menuItemsTeachers = menuItemTeachers
     const [isLogin, setIslogin] = useState(false);
     const [loginValue, setLoginValue] = useState()
     const pathname = window.location.pathname;
@@ -32,6 +35,10 @@ function App() {
             if(value&&value.position==='1') {
                 setAllRoutes(AllRoutesStudent);
                 setMenuItems(menuItemStudents)
+            }
+            else if(value&&value.position==='2') {
+                setAllRoutes(AllRoutesTeachers);
+                setMenuItems(menuItemTeachers)
             }
             else if(value&&value.position==='3') {
                 setAllRoutes(AllRoutesParent);
@@ -50,7 +57,9 @@ function App() {
 
             <LoginContext.Provider value={{ isLogin, loginValue }}>
 
-                {isLogin ? <SideNavPanel menuItems={menuItems} allRoutes={allRoutes}/> : filename !== 'login' ? <Login /> : ''}
+                {/* {isLogin ? <SideNavPanel menuItems={menuItems} allRoutes={allRoutes}/> : filename !== 'login' ? <Login /> : ''} */}
+                
+                {isLogin ? <SideNavPanel menuItems={menuItems} allRoutes={allRoutes} /> : filename !== 'login' ? <Login /> : ''}
 
             </LoginContext.Provider>
 
