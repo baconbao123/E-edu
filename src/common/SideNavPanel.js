@@ -15,9 +15,8 @@ export const SideNavPanel = ({ menuItems, allRoutes, menuItemsTeachers }) => {
 
   return (
     <Container fluid >
-
       <div className="edu-master " >
-        <Topbar />
+        <Topbar menuItems={menuItems}/>
         <Row>
           <Col md={2}>
             <SideBarItem menuItems={menuItems} />

@@ -15,10 +15,32 @@ import { Link } from "react-router-dom";
 import NavbarMD from "./NavbarMD";
 import AOS from "aos";
 import "aos/dist/aos.css";
-export const Topbar = ({ students, notifications }) => {
+import Cookies from "js-cookie";
+import Swal from "sweetalert2";
+
+export const Topbar = ({ students, notifications ,menuItems }) => {
     useEffect(() => {
         AOS.init();
     }, []);
+     // ham logout
+  const logout=()=>  {
+    Swal.fire({
+      title: 'Are you sure?',
+      text: "You won't be able to revert this!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Logout'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Cookies.remove('isLogin') 
+        window.location.reload();
+
+      }
+    })
+  
+  }
     const currentTime = new Date().toLocaleTimeString()
     const currentDate = new Date().toLocaleDateString()
     const { loginValue } = useContext(LoginContext);
@@ -43,7 +65,7 @@ export const Topbar = ({ students, notifications }) => {
     return (
         <>
             <div className="top-bar ">
-            <NavbarMD show={showMenu} />
+            <NavbarMD show={showMenu} menuItems={menuItems} />
                 <div className="d-block d-lg-none top-bar-icon-menu" style={{ zIndex: '6' }} ref={showMenu}>
                     <AiOutlineMenuFold />
                 </div>
@@ -168,7 +190,7 @@ export const Topbar = ({ students, notifications }) => {
                                         ))}
                                     </ul>
                                     <hr />
-                                    <div className="left-bar-logout hide-title"  >
+                                    <div className="left-bar-logout hide-title"  onClick={logout} >
                                         <IoLogOutOutline className="left-bar-icon-logout" /> <span>Logout</span>
                                     </div>
                                 </div>
