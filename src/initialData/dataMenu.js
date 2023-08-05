@@ -14,6 +14,10 @@ import Profile from '../common/Profile/Profile'
 import Mark from '../components/StudentLayout/Mark/Mark'
 import Progress from '../components/StudentLayout/Progress/Progress'
 
+import HomePageTeacher from '../components/TeacherLayout/HomeTeacher/HomePageTeacher'
+import RevisionClasses from '../components/TeacherLayout/RevisionClasses/RevisionClasses'
+import AddStudyRes from '../components/TeacherLayout/AddStudy/AddStudyRes'
+
 import { Route } from 'react-router-dom'
 export const menuItemStudents = [
     { content: 'Home', icon: <AiFillHome />, link: '/', component: <HomePage /> },
@@ -31,21 +35,23 @@ export const menuItemProfile = [
     {content: 'Setting', icon: <IoSettingsOutline />, link: '/setting',component: <Setting />}
 ];
 export const AllRoutes = [
-    { content: 'Home', icon: <AiFillHome />, link: '/', component: <HomePage /> },
+    { content: 'Home', icon: <AiFillHome />, link: '/', component: <HomePageTeacher /> },
     { content: 'Revision Classes', icon: <BsPeople />, link: '/revision' },
     { content: 'Study Resources', icon: <AiOutlineRead />, link: '/resources' },
     { content: 'Your Marks', icon: <BsBookmarkDash />, link: '/your_mark', component: <Mark /> },
-    { content: 'Academic Progress', icon: <GiEmptyHourglass />, link: '/progress', component: <Progress />},
+    { content: 'Academic Progress', icon: <GiEmptyHourglass />, link: '/progress', component: <AddStudyRes />},
     { content: 'Feedback', icon: <VscFeedback />, link: '/feedback', component: <FeedBack /> },
     { content: 'Contact Us', icon: <FiPhoneCall />, link: '/contact_us', component: <ContactUs /> },
     { content: 'Setting', icon: <IoSettingsOutline />, link: '/setting', component: <Setting /> },
     { content: 'Profile', icon: <IoSettingsOutline />, link: '/profile', component: <Profile/> },
 ];
 
+export const menuItemTeachers = [
+    { content: 'Home', icon: <AiFillHome />, link: '/', component: <HomePageTeacher /> },
+    { content: 'Revision Classes Updations', icon: <BsPeople />, link: '/revision', component: <RevisionClasses /> },
+    { content: 'Add Study Resources', icon: <AiOutlineRead />, link: '/resources', component: <AddStudyRes /> }
+  
+];
 
 
-// export const menuItemTeachers = [
-//     {content: 'People', icon: <AiFillHome />, link: '/'},
-//     {content: 'Revision Classes', icon: <BsPeople />, link: '/reviosion'},
-// ]
 

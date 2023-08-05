@@ -9,7 +9,7 @@ import NotFound from '../components/NotFound';
 import { students, notifications } from '../initialData/student';
 import './style.scss'
   ;
-export const SideNavPanel = ({ menuItems, allRoutes }) => {
+export const SideNavPanel = ({ menuItems, allRoutes, menuItemsTeachers }) => {
   console.log(allRoutes);
 
 
@@ -25,14 +25,19 @@ export const SideNavPanel = ({ menuItems, allRoutes }) => {
           <Col md={10} className='body'>
             <Routes>
               
-              {allRoutes.map((menuItem, index) =>  
+              {/* {allRoutes.map((menuItem, index) =>  
           
           
             ( <Route key={index} path={menuItem.link} element={menuItem.component} />)
           
             
-            )}
-              <Route path="*" element={<NotFound />} />
+            )} */}
+
+            {menuItems.map((menuItem, index)=>(
+              <Route key={index} path={menuItem.link} element={menuItem.component} />
+            ))}
+
+            <Route path="*" element={<NotFound />} />
 
             </Routes>
           </Col>
