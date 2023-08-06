@@ -51,7 +51,7 @@ export const AllRoutesStudent = [
 ];
 
 export const menuItemsParent = [
-    { content: 'Home ', icon: <AiFillHome />, link: '/homeparent', component: <HomePageParent /> },
+    { content: 'Home ', icon: <AiFillHome />, link: '/', component: <HomePageParent /> },
     { content: 'View marks', icon: <BsBookmarkDash />, link: '/viewmark', component: <ViewMarks /> },
     { content: 'Academic Progress', icon: <GiEmptyHourglass />, link: '/studentprogress', component: < ProgressParent /> },
     { content: 'Contact Us', icon: <FiPhoneCall />, link: '/contact_us', component: <ContactUs /> },
@@ -63,7 +63,7 @@ export const menuItemsParent = [
 
 
 export const AllRoutesParent = [
-    { content: 'Home ', icon: <AiFillHome />, link: '/homeparent', component: <HomePageParent /> },
+    { content: 'Home ', icon: <AiFillHome />, link: '/', component: <HomePageParent /> },
     { content: 'View marks', icon: <BsBookmarkDash />, link: '/viewmark', component: <ViewMarks /> },
     { content: 'Academic Progress', icon: <GiEmptyHourglass />, link: '/studentprogress', component: < ProgressParent /> },
     { content: 'Feedback', icon: <VscFeedback />, link: '/feedback', component: <FeedBack /> },
