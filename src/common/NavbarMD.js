@@ -11,6 +11,10 @@ import { AiOutlineMenuFold } from 'react-icons/ai'
 import { TbDeviceImacSearch } from 'react-icons/tb'
 import { menuItemStudents } from "../initialData/dataMenu";
 
+// thu vien thong bao
+import Cookies from "js-cookie";
+import Swal from "sweetalert2";
+
 function NavbarMD({ show ,menuItems }) {
   useEffect(() => {
     AOS.init({ once: true }); // Initialize AOS with the "once" option set to true
@@ -25,6 +29,25 @@ function NavbarMD({ show ,menuItems }) {
 
     }
   }, [show]);
+    // ham logout
+    const logout = () => {
+      Swal.fire({
+          title: 'Are you sure?',
+          text: "You won't be able to revert this!",
+          icon: 'warning',
+          showCancelButton: true,
+          confirmButtonColor: '#3085d6',
+          cancelButtonColor: '#d33',
+          confirmButtonText: 'Logout'
+      }).then((result) => {
+          if (result.isConfirmed) {
+              Cookies.remove('isLogin')
+              window.location.reload();
+
+          }
+      })
+
+  }
   const [clickHidden, setClickHidden] = useState(false);
   const [dropDown, setDropDown] = useState(false);
   function handleOnClickHidden() {
@@ -82,7 +105,7 @@ function NavbarMD({ show ,menuItems }) {
             </Link>
           ))}
         </ul>
-        <div className="left-bar-logout hide-title" >
+        <div className="left-bar-logout hide-title" onClick={logout} >
           <IoLogOutOutline className="left-bar-icon-logout" /> <span>Logout</span>
         </div>
         <hr />

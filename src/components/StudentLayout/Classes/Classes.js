@@ -30,36 +30,35 @@ function Classes() {
                 </div>
             </section>
             <section className='classe-table'>
-                <Col lg={12} md={12} xs={12}>
-                    <Table striped bordered hover variant="white">
-                        <thead>
-                            <tr>
-                                <th>Title</th>
-                                <th>Class /Room</th>
-                                <th>Teacher</th>
-                                <th>Date Study</th>
-            
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {classesDatas.map((item, index) => (
-                                <tr key={index}>
-                                    <td>
-                                        <div className="content_colmark d-flex gap-2 align-items-center ">
-                                            <button type="" className='btn btn-primary btn-sub'>{item.subject}</button>
-                                            <span className='sub-title'>{item.title} ,</span>  <span>{item.time}</span>
-                                        </div>
 
-                                    </td>
-                                    <td>{item.class}/{item.room}</td>
-                                    <td>{item.teacher}</td>
-                                    <td>{item.dateCreated}</td>
-                    
-                                </tr>
-                            ))}
-                        </tbody>
-                    </Table>
-                </Col>
+                <Table striped bordered hover variant="white" className='col-12'>
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Class /Room</th>
+                            <th>Teacher</th>
+                            <th>Date Study</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {classesDatas.map((item, index) => (
+                            <tr key={index}>
+                                <td>
+                                    <div className="content_colmark d-flex gap-2 align-items-center ">
+                                        <button type="" className='btn btn-primary btn-sub'>{item.subject}</button>
+                                        <span className='sub-title'>{item.title} ,</span>  <span>{item.time}</span>
+                                    </div>
+
+                                </td>
+                                <td>{item.class}/{item.room}</td>
+                                <td>{item.teacher}</td>
+                                <td>{item.dateCreated}</td>
+
+                            </tr>
+                        ))}
+                    </tbody>
+                </Table>
                 <Pagination >
                     <Pagination.First />
                     <Pagination.Prev />

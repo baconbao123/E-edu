@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect ,useRef} from "react";
+import React, { useState, useContext, useEffect, useRef } from "react";
 import { Col, Container, Dropdown, Row } from "react-bootstrap";
 import { BsBell } from 'react-icons/bs'
 import { CiSearch } from 'react-icons/ci'
@@ -18,29 +18,29 @@ import "aos/dist/aos.css";
 import Cookies from "js-cookie";
 import Swal from "sweetalert2";
 
-export const Topbar = ({ students, notifications ,menuItems }) => {
+export const Topbar = ({  menuItems }) => {
     useEffect(() => {
         AOS.init();
     }, []);
-     // ham logout
-  const logout=()=>  {
-    Swal.fire({
-      title: 'Are you sure?',
-      text: "You won't be able to revert this!",
-      icon: 'warning',
-      showCancelButton: true,
-      confirmButtonColor: '#3085d6',
-      cancelButtonColor: '#d33',
-      confirmButtonText: 'Logout'
-    }).then((result) => {
-      if (result.isConfirmed) {
-        Cookies.remove('isLogin') 
-        window.location.reload();
+    // ham logout
+    const logout = () => {
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Logout'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                Cookies.remove('isLogin')
+                window.location.reload();
 
-      }
-    })
-  
-  }
+            }
+        })
+
+    }
     const currentTime = new Date().toLocaleTimeString()
     const currentDate = new Date().toLocaleDateString()
     const { loginValue } = useContext(LoginContext);
@@ -56,16 +56,16 @@ export const Topbar = ({ students, notifications ,menuItems }) => {
     }
     const TruncatedTitle = ({ content }) => {
         if (content.length > 10) {
-          return <span className="info_name">{content.slice(0, 10)}...</span>;
+            return <span className="info_name">{content.slice(0, 10)}...</span>;
         } else {
-          return <span className="info_name">{content}</span>;
+            return <span className="info_name">{content}</span>;
         }
-      }; 
-      const showMenu = useRef(null);
+    };
+    const showMenu = useRef(null);
     return (
         <>
             <div className="top-bar ">
-            <NavbarMD show={showMenu} menuItems={menuItems} />
+                <NavbarMD show={showMenu} menuItems={menuItems} />
                 <div className="d-block d-lg-none top-bar-icon-menu" style={{ zIndex: '6' }} ref={showMenu}>
                     <AiOutlineMenuFold />
                 </div>
@@ -153,7 +153,7 @@ export const Topbar = ({ students, notifications ,menuItems }) => {
                         <div className="top-bar-info col-lg-2 col-sm-2 " onClick={handleShowInfor}>
                             <div>
                                 <img src={require(`../assets/img/img-todolist.jpg`)} alt="avatar" className="avatar" width={40} />
-                                <TruncatedTitle content={loginValue.email}/>
+                                <TruncatedTitle content={loginValue.email} />
                             </div>
                             <span className="icon-dropdown"><IoIosArrowDown /></span>
                             {showInfor && (
@@ -190,7 +190,7 @@ export const Topbar = ({ students, notifications ,menuItems }) => {
                                         ))}
                                     </ul>
                                     <hr />
-                                    <div className="left-bar-logout hide-title"  onClick={logout} >
+                                    <div className="left-bar-logout hide-title" onClick={logout} >
                                         <IoLogOutOutline className="left-bar-icon-logout" /> <span>Logout</span>
                                     </div>
                                 </div>
